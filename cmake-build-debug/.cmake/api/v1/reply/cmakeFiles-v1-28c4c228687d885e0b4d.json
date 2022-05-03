@@ -290,6 +290,9 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "E:/IDE/apps/CLion/ch-0/221.5080.224/bin/cmake/win/share/cmake-3.22/Modules/CMakeParseArguments.cmake"
+		},
+		{
+			"path" : "Source/assets/imagesrc.qrc"
 		}
 	],
 	"kind" : "cmakeFiles",

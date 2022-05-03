@@ -71,7 +71,8 @@
 		"E:/IDE/Qt/5.14.2/mingw73_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake",
 		"E:/IDE/Qt/5.14.2/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
 		"E:/IDE/Qt/5.14.2/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
-		"E:/IDE/apps/CLion/ch-0/221.5080.224/bin/cmake/win/share/cmake-3.22/Modules/CMakeParseArguments.cmake"
+		"E:/IDE/apps/CLion/ch-0/221.5080.224/bin/cmake/win/share/cmake-3.22/Modules/CMakeParseArguments.cmake",
+		"F:/IDEProjects/CLionProjects/Game/Source/assets/imagesrc.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "F:/IDEProjects/CLionProjects/Game",
 	"DEP_FILE" : "",

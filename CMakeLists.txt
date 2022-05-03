@@ -6,7 +6,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-set(CMAKE_PREFIX_PATH "D:/englishaddress/5.12.1/mingw73_64")
+set(CMAKE_PREFIX_PATH "%QT_CMAKE%")
 
 find_package(Qt5 COMPONENTS
         Core

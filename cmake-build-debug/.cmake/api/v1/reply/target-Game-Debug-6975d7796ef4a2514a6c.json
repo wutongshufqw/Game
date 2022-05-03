@@ -35,7 +35,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 26,
+				"line" : 27,
 				"parent" : 0
 			},
 			{
@@ -130,8 +130,9 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1,
-				2
+				2,
+				3,
+				7
 			]
 		}
 	],
@@ -191,23 +192,32 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1,
-				2
-			]
-		},
-		{
-			"name" : "Header Files",
-			"sourceIndexes" : 
-			[
+				2,
 				3,
-				5
+				7
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				4
+				1,
+				5
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				4,
+				6
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				8
 			]
 		}
 	],
@@ -219,6 +229,11 @@
 			"isGenerated" : true,
 			"path" : "cmake-build-debug/Game_autogen/mocs_compilation.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Source/assets/imagesrc.qrc",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
@@ -235,18 +250,31 @@
 		{
 			"backtrace" : 1,
 			"path" : "Source/Headers/mainwindow.h",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,
 			"path" : "Source/Forms/mainwindow.ui",
-			"sourceGroupIndex" : 2
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "cmake-build-debug/Game_autogen/include/Source/Forms/ui_mainwindow.h",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/Game_autogen/JDUL3767SG/qrc_imagesrc.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/Game_autogen/JDUL3767SG/qrc_imagesrc.cpp.rule",
+			"sourceGroupIndex" : 3
 		}
 	],
 	"type" : "EXECUTABLE"

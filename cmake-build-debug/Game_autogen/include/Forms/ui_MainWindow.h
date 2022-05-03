@@ -23,7 +23,8 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(400, 300);
+        MainWindow->resize(1280, 800);
+        MainWindow->setStyleSheet(QString::fromUtf8("border-image: url(:/mainwindow/background.jpg);"));
 
         retranslateUi(MainWindow);
 
