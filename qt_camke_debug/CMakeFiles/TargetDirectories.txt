@@ -1,0 +1,4 @@
+D:/IDEA/toolbox1111/apps/CLion/Projects/Game/qt_camke_debug/CMakeFiles/Game.dir
+D:/IDEA/toolbox1111/apps/CLion/Projects/Game/qt_camke_debug/CMakeFiles/edit_cache.dir
+D:/IDEA/toolbox1111/apps/CLion/Projects/Game/qt_camke_debug/CMakeFiles/rebuild_cache.dir
+D:/IDEA/toolbox1111/apps/CLion/Projects/Game/qt_camke_debug/CMakeFiles/Game_autogen.dir
