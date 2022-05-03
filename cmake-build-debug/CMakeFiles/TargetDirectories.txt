@@ -1,0 +1,4 @@
+F:/IDEProjects/CLionProjects/Game/cmake-build-debug/CMakeFiles/Game.dir
+F:/IDEProjects/CLionProjects/Game/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/IDEProjects/CLionProjects/Game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+F:/IDEProjects/CLionProjects/Game/cmake-build-debug/CMakeFiles/Game_autogen.dir
