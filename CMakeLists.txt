@@ -6,7 +6,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-set(CMAKE_PREFIX_PATH "E:/IDE/Qt/5.14.2/mingw73_64")
+set(CMAKE_PREFIX_PATH "D:/englishaddress/5.12.1/mingw73_64")
 
 find_package(Qt5 COMPONENTS
         Core
@@ -20,6 +20,7 @@ include_directories(
 )
 
 add_executable(Game
+        Source/assets/imagesrc.qrc
         Source/main.cpp
         Source/mainwindow.cpp Source/Headers/mainwindow.h Source/Forms/mainwindow.ui
         )
