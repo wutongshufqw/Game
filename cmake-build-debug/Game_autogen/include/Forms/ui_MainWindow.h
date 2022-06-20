@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.14.2
+** Created by: Qt User Interface Compiler version 5.12.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -11,35 +11,34 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_MainWindow
+class Ui_Mainwindow
 {
 public:
 
-    void setupUi(QMainWindow *MainWindow)
+    void setupUi(QWidget *Mainwindow)
     {
-        if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1280, 800);
-        MainWindow->setStyleSheet(QString::fromUtf8("border-image: url(:/mainwindow/background.jpg);"));
+        if (Mainwindow->objectName().isEmpty())
+            Mainwindow->setObjectName(QString::fromUtf8("Mainwindow"));
+        Mainwindow->resize(1280, 800);
 
-        retranslateUi(MainWindow);
+        retranslateUi(Mainwindow);
 
-        QMetaObject::connectSlotsByName(MainWindow);
+        QMetaObject::connectSlotsByName(Mainwindow);
     } // setupUi
 
-    void retranslateUi(QMainWindow *MainWindow)
+    void retranslateUi(QWidget *Mainwindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        Mainwindow->setWindowTitle(QApplication::translate("Mainwindow", "Mainwindow", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class MainWindow: public Ui_MainWindow {};
+    class Mainwindow: public Ui_Mainwindow {};
 } // namespace Ui
 
 QT_END_NAMESPACE

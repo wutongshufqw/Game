@@ -5,7 +5,7 @@
 // You may need to build the project (run Qt uic code generator) to get "ui_GameSelect.h" resolved
 
 #include "Headers/gameselect.h"
-#include "Forms/gameselect.ui"
+#include "Forms/ui_GameSelect.h"
 
 
 GameSelect::GameSelect(QWidget *parent) :

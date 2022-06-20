@@ -5,7 +5,7 @@
 // You may need to build the project (run Qt uic code generator) to get "ui_Mainwindow.h" resolved
 
 #include "mainwindow.h"
-#include "Forms/ui_Mainwindow.h"
+#include "Forms/ui_MainWindow.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :

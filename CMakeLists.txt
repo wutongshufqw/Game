@@ -23,6 +23,8 @@ add_executable(Game
         Source/assets/imagesrc.qrc
         Source/main.cpp
         Source/mainwindow.cpp Source/Headers/mainwindow.h Source/Forms/mainwindow.ui
+        Source/gameplay.cpp Source/Headers/gameplay.h Source/Forms/gameplay.ui
+        Source/gameselect.cpp Source/Headers/gameselect.h Source/Forms/gameselect.ui
         )
 target_link_libraries(Game
         Qt5::Core
