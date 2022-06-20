@@ -1,4 +1,4 @@
-# Install script for directory: F:/IDEProjects/CLionProjects/Game
+# Install script for directory: D:/HITLearn/cpp/Game
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "E:/IDE/apps/CLion/ch-0/221.5787.29/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "D:/toolbox/apps/CLion/ch-0/221.5787.29/bin/mingw/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "F:/IDEProjects/CLionProjects/Game/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/HITLearn/cpp/Game/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

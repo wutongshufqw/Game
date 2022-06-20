@@ -11,34 +11,35 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QWidget>
+#include <QtWidgets/QMainWindow>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Mainwindow
+class Ui_MainWindow
 {
 public:
 
-    void setupUi(QWidget *Mainwindow)
+    void setupUi(QMainWindow *MainWindow)
     {
-        if (Mainwindow->objectName().isEmpty())
-            Mainwindow->setObjectName(QString::fromUtf8("Mainwindow"));
-        Mainwindow->resize(1280, 800);
+        if (MainWindow->objectName().isEmpty())
+            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
+        MainWindow->resize(1280, 800);
+        MainWindow->setStyleSheet(QString::fromUtf8("border-image: url(:/mainwindow/background.jpg);"));
 
-        retranslateUi(Mainwindow);
+        retranslateUi(MainWindow);
 
-        QMetaObject::connectSlotsByName(Mainwindow);
+        QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
 
-    void retranslateUi(QWidget *Mainwindow)
+    void retranslateUi(QMainWindow *MainWindow)
     {
-        Mainwindow->setWindowTitle(QCoreApplication::translate("Mainwindow", "Mainwindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Mainwindow: public Ui_Mainwindow {};
+    class MainWindow: public Ui_MainWindow {};
 } // namespace Ui
 
 QT_END_NAMESPACE
