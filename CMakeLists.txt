@@ -6,7 +6,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-set(CMAKE_PREFIX_PATH "$ENV{QT_CMAKE}")
+set(CMAKE_PREFIX_PATH $ENV{QT_CMAKE})
 
 find_package(Qt5 COMPONENTS
         Core
@@ -22,8 +22,8 @@ include_directories(
 add_executable(Game
         Source/assets/imagesrc.qrc
         Source/main.cpp
-        Source/mainwindow.cpp Source/Headers/mainwindow.h Source/Forms/mainwindow.ui
-        )
+        Source/Headers/mainwindow.h
+        Source/gameplay.cpp Source/Headers/gameplay.h Source/Forms/gameplay.ui Source/mainwindow.cpp Source/Headers/mainwindow.h Source/Forms/mainwindow.ui)
 target_link_libraries(Game
         Qt5::Core
         Qt5::Gui
