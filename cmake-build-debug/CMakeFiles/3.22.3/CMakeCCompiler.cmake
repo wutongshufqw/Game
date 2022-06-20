@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "E:/IDE/apps/CLion/ch-0/221.5591.52/bin/mingw/bin/gcc.exe")
+set(CMAKE_C_COMPILER "E:/IDE/apps/CLion/ch-0/221.5787.29/bin/mingw/bin/gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "11.2.0")
@@ -21,11 +21,11 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "E:/IDE/apps/CLion/ch-0/221.5591.52/bin/mingw/bin/ar.exe")
-set(CMAKE_C_COMPILER_AR "E:/IDE/apps/CLion/ch-0/221.5591.52/bin/mingw/bin/gcc-ar.exe")
-set(CMAKE_RANLIB "E:/IDE/apps/CLion/ch-0/221.5591.52/bin/mingw/bin/ranlib.exe")
-set(CMAKE_C_COMPILER_RANLIB "E:/IDE/apps/CLion/ch-0/221.5591.52/bin/mingw/bin/gcc-ranlib.exe")
-set(CMAKE_LINKER "E:/IDE/apps/CLion/ch-0/221.5591.52/bin/mingw/bin/ld.exe")
+set(CMAKE_AR "E:/IDE/apps/CLion/ch-0/221.5787.29/bin/mingw/bin/ar.exe")
+set(CMAKE_C_COMPILER_AR "E:/IDE/apps/CLion/ch-0/221.5787.29/bin/mingw/bin/gcc-ar.exe")
+set(CMAKE_RANLIB "E:/IDE/apps/CLion/ch-0/221.5787.29/bin/mingw/bin/ranlib.exe")
+set(CMAKE_C_COMPILER_RANLIB "E:/IDE/apps/CLion/ch-0/221.5787.29/bin/mingw/bin/gcc-ranlib.exe")
+set(CMAKE_LINKER "E:/IDE/apps/CLion/ch-0/221.5787.29/bin/mingw/bin/ld.exe")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)
@@ -66,7 +66,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "E:/IDE/apps/CLion/ch-0/221.5591.52/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include;E:/IDE/apps/CLion/ch-0/221.5591.52/bin/mingw/include;E:/IDE/apps/CLion/ch-0/221.5591.52/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed;E:/IDE/apps/CLion/ch-0/221.5591.52/bin/mingw/x86_64-w64-mingw32/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "E:/IDE/apps/CLion/ch-0/221.5787.29/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include;E:/IDE/apps/CLion/ch-0/221.5787.29/bin/mingw/include;E:/IDE/apps/CLion/ch-0/221.5787.29/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed;E:/IDE/apps/CLion/ch-0/221.5787.29/bin/mingw/x86_64-w64-mingw32/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "mingw32;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc;moldname;mingwex;kernel32")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "E:/IDE/apps/CLion/ch-0/221.5591.52/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0;E:/IDE/apps/CLion/ch-0/221.5591.52/bin/mingw/lib/gcc;E:/IDE/apps/CLion/ch-0/221.5591.52/bin/mingw/x86_64-w64-mingw32/lib;E:/IDE/apps/CLion/ch-0/221.5591.52/bin/mingw/lib")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "E:/IDE/apps/CLion/ch-0/221.5787.29/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0;E:/IDE/apps/CLion/ch-0/221.5787.29/bin/mingw/lib/gcc;E:/IDE/apps/CLion/ch-0/221.5787.29/bin/mingw/x86_64-w64-mingw32/lib;E:/IDE/apps/CLion/ch-0/221.5787.29/bin/mingw/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

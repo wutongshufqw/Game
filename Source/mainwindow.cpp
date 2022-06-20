@@ -1,16 +1,17 @@
 //
-// Created by y on 2022/5/3.
+// Created by y on 2022/6/20.
 //
 
-// You may need to build the project (run Qt uic code generator) to get "ui_MainWindow.h" resolved
+// You may need to build the project (run Qt uic code generator) to get "ui_Mainwindow.h" resolved
 
-#include "Headers/mainwindow.h"
-#include "Forms/ui_MainWindow.h"
+#include "mainwindow.h"
+#include "Forms/ui_Mainwindow.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
-        QMainWindow(parent), ui(new Ui::MainWindow) {
+        QWidget(parent), ui(new Ui::Mainwindow) {
     ui->setupUi(this);
+    this->setStyleSheet("background-image:url(:/mainwindow/background.jpg)");
 }
 
 MainWindow::~MainWindow() {

@@ -1,18 +1,18 @@
 //
-// Created by y on 2022/5/3.
+// Created by y on 2022/6/20.
 //
 
 #ifndef GAME_MAINWINDOW_H
 #define GAME_MAINWINDOW_H
 
-#include <QMainWindow>
+#include <QWidget>
 
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui { class Mainwindow; }
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow {
+class MainWindow : public QWidget {
 Q_OBJECT
 
 public:
@@ -21,7 +21,7 @@ public:
     ~MainWindow() override;
 
 private:
-    Ui::MainWindow *ui;
+    Ui::Mainwindow *ui;
 };
 
 
