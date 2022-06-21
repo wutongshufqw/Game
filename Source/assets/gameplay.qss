@@ -32,6 +32,6 @@ QLabel{
     text-align: center;
 }
 
-.QWidget{
+QWidget#GamePlay{
     border-image: url(":/mainwindow/background.jpg");
 }

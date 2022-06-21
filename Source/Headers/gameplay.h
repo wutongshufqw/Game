@@ -13,7 +13,6 @@ namespace Ui { class GamePlay; }
 QT_END_NAMESPACE
 
 class GamePlay : public QWidget {
-Q_OBJECT
 
 public:
     explicit GamePlay(QWidget *parent = nullptr);
