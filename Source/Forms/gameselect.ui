@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-    <class>GameSelect</class>
-    <widget class="QWidget" name="GameSelect">
-        <property name="geometry">
-            <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>417</width>
-                <height>315</height>
-            </rect>
-        </property>
-        <property name="windowTitle">
-            <string>GameSelect</string>
-        </property>
-    </widget>
-    <resources/>
-    <connections/>
+ <class>GameSelect</class>
+ <widget class="QWidget" name="GameSelect">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>417</width>
+    <height>315</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GameSelect</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>110</y>
+     <width>41</width>
+     <height>9</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
 </ui>
