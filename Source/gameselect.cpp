@@ -11,6 +11,7 @@
 GameSelect::GameSelect(QWidget *parent) :
         QWidget(parent), ui(new Ui::GameSelect) {
     ui->setupUi(this);
+    setFixedSize(QSize(1280,800));
 }
 
 GameSelect::~GameSelect() {

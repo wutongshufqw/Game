@@ -148,7 +148,7 @@ build Game_autogen: phony CMakeFiles/Game_autogen Game_autogen/mocs_compilation.
 #############################################
 # Custom command for Game_autogen\JDUL3767SG\qrc_imagesrc.cpp
 
-build Game_autogen/JDUL3767SG/qrc_imagesrc.cpp | ${cmake_ninja_workdir}Game_autogen/JDUL3767SG/qrc_imagesrc.cpp: CUSTOM_COMMAND ../Source/assets/imagesrc.qrc CMakeFiles/Game_autogen.dir/AutoRcc_imagesrc_JDUL3767SG_Info.json ../Source/assets/background.jpg D$:/HITLearn/cpp/qt/5.12.1/mingw73_64/bin/rcc.exe || Game_autogen
+build Game_autogen/JDUL3767SG/qrc_imagesrc.cpp | ${cmake_ninja_workdir}Game_autogen/JDUL3767SG/qrc_imagesrc.cpp: CUSTOM_COMMAND ../Source/assets/imagesrc.qrc CMakeFiles/Game_autogen.dir/AutoRcc_imagesrc_JDUL3767SG_Info.json ../Source/assets/image1.png ../Source/assets/background.jpg D$:/HITLearn/cpp/qt/5.12.1/mingw73_64/bin/rcc.exe || Game_autogen
   COMMAND = cmd.exe /C "cd /D D:\HITLearn\cpp\Game\cmake-build-debug && D:\toolbox\apps\CLion\ch-0\221.5787.29\bin\cmake\win\bin\cmake.exe -E cmake_autorcc D:/HITLearn/cpp/Game/cmake-build-debug/CMakeFiles/Game_autogen.dir/AutoRcc_imagesrc_JDUL3767SG_Info.json Debug"
   DESC = Automatic RCC for Source/assets/imagesrc.qrc
   restat = 1

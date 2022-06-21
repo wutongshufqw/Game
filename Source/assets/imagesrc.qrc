@@ -2,4 +2,7 @@
     <qresource prefix="/mainwindow">
         <file>background.jpg</file>
     </qresource>
+    <qresource prefix="/gameselect">
+        <file>image1.png</file>
+    </qresource>
 </RCC>
