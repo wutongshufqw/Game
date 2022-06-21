@@ -3,7 +3,5 @@
         <file>background.jpg</file>
         <file>icon.jpg</file>
     </qresource>
-    <qresource prefix="/gameplay">
-        <file>button_0.jpg</file>
-    </qresource>
+    <qresource prefix="/gameplay"/>
 </RCC>

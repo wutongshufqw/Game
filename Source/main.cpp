@@ -1,15 +1,18 @@
 #include <QApplication>
 #include <QPushButton>
 #include <QFontDatabase>
+#include <QFile>
+#include <QDebug>
 #include "mainwindow.h"
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
-    int localFont = QFontDatabase::addApplicationFont(":/qss/No.93-ShangShouMengDongTi-2.ttf");
+    int localFont=QFontDatabase::addApplicationFont(QApplication::applicationDirPath()+"../../Source/assets/No.93-ShangShouMengDongTi-2.ttf");
     QFontDatabase::applicationFontFamilies(localFont);
-    /*QFontDatabase qfd;
+    /*qDebug()<<localFont;
+    QFontDatabase qfd;
     QStringList qsl = qfd.families();
-    for(int i = 0; i < qsl.size(); i++) {
+    for(int i = 0; i < 2; i++) {
         qDebug(qsl.at(i).toStdString().c_str());
     }*/
     MainWindow window;
