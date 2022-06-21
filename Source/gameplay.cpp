@@ -13,7 +13,7 @@
 GamePlay::GamePlay(QWidget *parent) :
         QWidget(parent), ui(new Ui::GamePlay) {
     ui->setupUi(this);
-    setFixedSize(QSize(1280,800));
+    setFixedSize(QSize(1280, 800));
     setWindowTitle("第1关");
     QFile GPQss(":/qss/gameplay.qss");
     if (GPQss.open(QFile::ReadOnly))

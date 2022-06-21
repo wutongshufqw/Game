@@ -21,6 +21,7 @@ public:
     ~GamePlay() override;
 
 public slots:
+
     void restart_clicked();
 
     void submit_clicked();

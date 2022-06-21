@@ -24,6 +24,7 @@ public:
     ~MainWindow() override;
 
 public slots:
+
     void game_select();
 
 private:

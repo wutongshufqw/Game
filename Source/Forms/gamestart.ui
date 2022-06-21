@@ -11,35 +11,16 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Mainwindow</string>
+   <string>GameStart</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true"/>
-  </property>
-  <widget class="QGraphicsView" name="graphicsView">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1280</width>
-     <height>800</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/mainwindow/background.png);</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="start">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>470</y>
-     <width>281</width>
-     <height>81</height>
+     <x>550</x>
+     <y>480</y>
+     <width>201</width>
+     <height>71</height>
     </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/mainwindow/start.png);</string>
    </property>
    <property name="text">
     <string/>
@@ -48,14 +29,11 @@
   <widget class="QPushButton" name="exit">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>590</y>
-     <width>281</width>
-     <height>81</height>
+     <x>550</x>
+     <y>560</y>
+     <width>201</width>
+     <height>71</height>
     </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/mainwindow/exit.png);</string>
    </property>
    <property name="text">
     <string/>
