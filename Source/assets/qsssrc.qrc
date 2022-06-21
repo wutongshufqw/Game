@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/qss">
+        <file>gameplay.qss</file>
+        <file>No.93-ShangShouMengDongTi-2.ttf</file>
+    </qresource>
+</RCC>
