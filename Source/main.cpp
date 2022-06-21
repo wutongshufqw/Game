@@ -1,11 +1,18 @@
 #include <QApplication>
 #include <QPushButton>
-#include "Headers/mainwindow.h"
-#include "Headers/gameselect.h"
+#include <QFontDatabase>
+#include "mainwindow.h"
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
-    GameSelect w;
-    w.show();
+    int localFont = QFontDatabase::addApplicationFont(":/qss/No.93-ShangShouMengDongTi-2.ttf");
+    QFontDatabase::applicationFontFamilies(localFont);
+    /*QFontDatabase qfd;
+    QStringList qsl = qfd.families();
+    for(int i = 0; i < qsl.size(); i++) {
+        qDebug(qsl.at(i).toStdString().c_str());
+    }*/
+    MainWindow window;
+    window.show();
     return QApplication::exec();
 }
