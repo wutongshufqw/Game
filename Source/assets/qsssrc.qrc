@@ -3,5 +3,7 @@
         <file>gameplay.qss</file>
         <file>No.93-ShangShouMengDongTi-2.ttf</file>
         <file>gamestart.qss</file>
+        <file>gameselect.qss</file>
+
     </qresource>
 </RCC>

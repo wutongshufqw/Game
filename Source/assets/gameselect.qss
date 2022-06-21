@@ -1,6 +1,8 @@
+QWidget#GameSelect{
+    border-image:url(":/gameselect/image1.png");
+}
+
 QPushButton{
-/*	font: 20pt "093-上首萌动体";*/
-	font: 20pt "093-SSMengDongiTi";
     color: #2f3640;
     background-color: #f5f6fa;
     border-color: #2f3640;
@@ -25,15 +27,4 @@ QPushButton::disabled{
     color: #FFFFFF;
     background-color: #dcdde1;
     border-color: #dcdde1;
-}
-
-QLabel{
-/*    font: 20pt "093-上首萌动体";*/
-    font: 20pt "093-SSMengDongiTi";
-    color: #2f3640;
-    text-align: center;
-}
-
-QWidget#GamePlay{
-    border-image: url(":/mainwindow/background.jpg");
 }

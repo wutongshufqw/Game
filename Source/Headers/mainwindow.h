@@ -21,6 +21,8 @@ Q_OBJECT
 public:
     explicit MainWindow(QWidget *parent = nullptr);
 
+    void playGame(GamePlay *gamePlay);
+
     ~MainWindow() override;
 
 public slots:
@@ -29,8 +31,8 @@ public slots:
 
 private:
     Ui::MainWindow *ui;
-    GameStart *gameStart;
-    GameSelect *gameSelect;
+    QWidget *gameStart;
+    QWidget *gameSelect;
 };
 
 

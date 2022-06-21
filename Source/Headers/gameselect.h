@@ -6,6 +6,8 @@
 #define GAME_GAMESELECT_H
 
 #include <QWidget>
+#include "gameplay.h"
+#include "mainwindow.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -13,15 +15,19 @@ namespace Ui { class GameSelect; }
 QT_END_NAMESPACE
 
 class GameSelect : public QWidget {
-Q_OBJECT
 
 public:
-    explicit GameSelect(QWidget *parent = nullptr);
+    explicit GameSelect(QWidget *parent, QMainWindow *mainWindow);
 
     ~GameSelect() override;
 
+public slots:
+    void playGame_1();
+
 private:
     Ui::GameSelect *ui;
+    GamePlay *gamePlay;
+    QMainWindow *mainWindow;
 };
 
 

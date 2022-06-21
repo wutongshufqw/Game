@@ -16,9 +16,10 @@ MainWindow::MainWindow(QWidget *parent) :
     setWindowTitle("一笔画小游戏");
     setWindowIcon(QIcon(":/mainwindow/icon.jpg"));
     setFixedSize(QSize(1280, 820));
-//    gameStart = new GameStart(this);
-GamePlay *gamePlay = new GamePlay(this);
-    setCentralWidget(gamePlay);
+    gameStart = new GameStart(this);
+//    gameSelect = new GameSelect(this);
+//GamePlay *gamePlay = new GamePlay(this);
+    setCentralWidget(gameStart);
 }
 
 MainWindow::~MainWindow() {
@@ -26,9 +27,13 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::game_select() {
-    gameSelect = new GameSelect(gameStart);
+    gameSelect = new GameSelect(gameStart, this);
     gameStart->hide();
     setCentralWidget(gameSelect);
+}
+
+void MainWindow::playGame(GamePlay *gamePlay) {
+    setCentralWidget(gamePlay);
 }
 
 
