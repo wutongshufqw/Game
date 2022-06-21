@@ -24,7 +24,8 @@ add_executable(Game
         Source/main.cpp
         Source/gameplay.cpp Source/Headers/gameplay.h Source/Forms/gameplay.ui
         Source/gameselect.cpp Source/Headers/gameselect.h Source/Forms/gameselect.ui
-        Source/mainwindow.cpp Source/Headers/mainwindow.h Source/Forms/mainwindow.ui)
+        Source/gamestart.cpp Source/Headers/gamestart.h Source/Forms/gamestart.ui
+        Source/mainwindow.cpp Source/Headers/mainwindow.h Source/Forms/mainwindow.ui Source/gamestart.cpp Source/Headers/gamestart.h Source/Forms/gamestart.ui)
 target_link_libraries(Game
         Qt5::Core
         Qt5::Gui

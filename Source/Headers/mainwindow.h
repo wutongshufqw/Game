@@ -6,6 +6,9 @@
 #define GAME_MAINWINDOW_H
 
 #include <QMainWindow>
+#include "gamestart.h"
+#include "gameselect.h"
+#include "gameplay.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -20,8 +23,13 @@ public:
 
     ~MainWindow() override;
 
+public slots:
+    void game_select();
+
 private:
     Ui::MainWindow *ui;
+    GameStart *gameStart;
+    GameSelect *gameSelect;
 };
 
 

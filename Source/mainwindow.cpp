@@ -7,6 +7,7 @@
 #include "mainwindow.h"
 #include "Forms/ui_MainWindow.h"
 #include "gameplay.h"
+#include "gamestart.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -14,10 +15,17 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     setWindowTitle("一笔画小游戏");
     setWindowIcon(QIcon(":/mainwindow/icon.jpg"));
-    GamePlay *gamePlay = new GamePlay(this);
-    setCentralWidget(gamePlay);
+    gameStart = new GameStart(this);
+    gameSelect = new GameSelect(gameStart);
+    setCentralWidget(gameStart);
 }
 
 MainWindow::~MainWindow() {
     delete ui;
 }
+
+void MainWindow::game_select() {
+    setCentralWidget(gameSelect);
+}
+
+
