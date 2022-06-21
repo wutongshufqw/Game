@@ -73,6 +73,22 @@ build CMakeFiles/Game.dir/Source/mainwindow.cpp.obj: CXX_COMPILER__Game_Debug D$
   OBJECT_DIR = CMakeFiles\Game.dir
   OBJECT_FILE_DIR = CMakeFiles\Game.dir\Source
 
+build CMakeFiles/Game.dir/Source/gameplay.cpp.obj: CXX_COMPILER__Game_Debug D$:/HITLearn/cpp/Game/Source/gameplay.cpp || cmake_object_order_depends_target_Game
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles\Game.dir\Source\gameplay.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -ID:/HITLearn/cpp/Game/cmake-build-debug/Game_autogen/include -ID:/HITLearn/cpp/Game/include -ID:/HITLearn/cpp/Game/Source/Headers -isystem D:/HITLearn/cpp/qt/5.12.1/mingw73_64/include -isystem D:/HITLearn/cpp/qt/5.12.1/mingw73_64/include/QtCore -isystem D:/HITLearn/cpp/qt/5.12.1/mingw73_64/./mkspecs/win32-g++ -isystem D:/HITLearn/cpp/qt/5.12.1/mingw73_64/include/QtGui -isystem D:/HITLearn/cpp/qt/5.12.1/mingw73_64/include/QtANGLE -isystem D:/HITLearn/cpp/qt/5.12.1/mingw73_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\Game.dir
+  OBJECT_FILE_DIR = CMakeFiles\Game.dir\Source
+
+build CMakeFiles/Game.dir/Source/gameselect.cpp.obj: CXX_COMPILER__Game_Debug D$:/HITLearn/cpp/Game/Source/gameselect.cpp || cmake_object_order_depends_target_Game
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles\Game.dir\Source\gameselect.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -ID:/HITLearn/cpp/Game/cmake-build-debug/Game_autogen/include -ID:/HITLearn/cpp/Game/include -ID:/HITLearn/cpp/Game/Source/Headers -isystem D:/HITLearn/cpp/qt/5.12.1/mingw73_64/include -isystem D:/HITLearn/cpp/qt/5.12.1/mingw73_64/include/QtCore -isystem D:/HITLearn/cpp/qt/5.12.1/mingw73_64/./mkspecs/win32-g++ -isystem D:/HITLearn/cpp/qt/5.12.1/mingw73_64/include/QtGui -isystem D:/HITLearn/cpp/qt/5.12.1/mingw73_64/include/QtANGLE -isystem D:/HITLearn/cpp/qt/5.12.1/mingw73_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\Game.dir
+  OBJECT_FILE_DIR = CMakeFiles\Game.dir\Source
+
 build CMakeFiles/Game.dir/Game_autogen/JDUL3767SG/qrc_imagesrc.cpp.obj: CXX_COMPILER__Game_Debug D$:/HITLearn/cpp/Game/cmake-build-debug/Game_autogen/JDUL3767SG/qrc_imagesrc.cpp || cmake_object_order_depends_target_Game
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles\Game.dir\Game_autogen\JDUL3767SG\qrc_imagesrc.cpp.obj.d
@@ -89,7 +105,7 @@ build CMakeFiles/Game.dir/Game_autogen/JDUL3767SG/qrc_imagesrc.cpp.obj: CXX_COMP
 #############################################
 # Link the executable Game.exe
 
-build Game.exe: CXX_EXECUTABLE_LINKER__Game_Debug CMakeFiles/Game.dir/Game_autogen/mocs_compilation.cpp.obj CMakeFiles/Game.dir/Source/main.cpp.obj CMakeFiles/Game.dir/Source/mainwindow.cpp.obj CMakeFiles/Game.dir/Game_autogen/JDUL3767SG/qrc_imagesrc.cpp.obj | D$:/HITLearn/cpp/qt/5.12.1/mingw73_64/lib/libQt5Widgetsd.a D$:/HITLearn/cpp/qt/5.12.1/mingw73_64/lib/libQt5Guid.a D$:/HITLearn/cpp/qt/5.12.1/mingw73_64/lib/libQt5Cored.a || Game_autogen
+build Game.exe: CXX_EXECUTABLE_LINKER__Game_Debug CMakeFiles/Game.dir/Game_autogen/mocs_compilation.cpp.obj CMakeFiles/Game.dir/Source/main.cpp.obj CMakeFiles/Game.dir/Source/mainwindow.cpp.obj CMakeFiles/Game.dir/Source/gameplay.cpp.obj CMakeFiles/Game.dir/Source/gameselect.cpp.obj CMakeFiles/Game.dir/Game_autogen/JDUL3767SG/qrc_imagesrc.cpp.obj | D$:/HITLearn/cpp/qt/5.12.1/mingw73_64/lib/libQt5Widgetsd.a D$:/HITLearn/cpp/qt/5.12.1/mingw73_64/lib/libQt5Guid.a D$:/HITLearn/cpp/qt/5.12.1/mingw73_64/lib/libQt5Cored.a || Game_autogen
   FLAGS = -g
   LINK_LIBRARIES = D:/HITLearn/cpp/qt/5.12.1/mingw73_64/lib/libQt5Widgetsd.a  D:/HITLearn/cpp/qt/5.12.1/mingw73_64/lib/libQt5Guid.a  D:/HITLearn/cpp/qt/5.12.1/mingw73_64/lib/libQt5Cored.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Game.dir
@@ -126,7 +142,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Utility command for Game_autogen
 
-build Game_autogen: phony CMakeFiles/Game_autogen Game_autogen/mocs_compilation.cpp Game_autogen/include/Source/Forms/ui_mainwindow.h
+build Game_autogen: phony CMakeFiles/Game_autogen Game_autogen/mocs_compilation.cpp Game_autogen/include/Source/Forms/ui_mainwindow.h Game_autogen/include/Source/Forms/ui_gameplay.h Game_autogen/include/Source/Forms/ui_gameselect.h
 
 
 #############################################
@@ -141,7 +157,7 @@ build Game_autogen/JDUL3767SG/qrc_imagesrc.cpp | ${cmake_ninja_workdir}Game_auto
 #############################################
 # Custom command for CMakeFiles\Game_autogen
 
-build CMakeFiles/Game_autogen Game_autogen/mocs_compilation.cpp Game_autogen/include/Source/Forms/ui_mainwindow.h | ${cmake_ninja_workdir}CMakeFiles/Game_autogen ${cmake_ninja_workdir}Game_autogen/mocs_compilation.cpp ${cmake_ninja_workdir}Game_autogen/include/Source/Forms/ui_mainwindow.h: CUSTOM_COMMAND
+build CMakeFiles/Game_autogen Game_autogen/mocs_compilation.cpp Game_autogen/include/Source/Forms/ui_mainwindow.h Game_autogen/include/Source/Forms/ui_gameplay.h Game_autogen/include/Source/Forms/ui_gameselect.h | ${cmake_ninja_workdir}CMakeFiles/Game_autogen ${cmake_ninja_workdir}Game_autogen/mocs_compilation.cpp ${cmake_ninja_workdir}Game_autogen/include/Source/Forms/ui_mainwindow.h ${cmake_ninja_workdir}Game_autogen/include/Source/Forms/ui_gameplay.h ${cmake_ninja_workdir}Game_autogen/include/Source/Forms/ui_gameselect.h: CUSTOM_COMMAND
   COMMAND = cmd.exe /C "cd /D D:\HITLearn\cpp\Game\cmake-build-debug && D:\toolbox\apps\CLion\ch-0\221.5787.29\bin\cmake\win\bin\cmake.exe -E cmake_autogen D:/HITLearn/cpp/Game/cmake-build-debug/CMakeFiles/Game_autogen.dir/AutogenInfo.json Debug"
   DESC = Automatic MOC and UIC for target Game
   restat = 1

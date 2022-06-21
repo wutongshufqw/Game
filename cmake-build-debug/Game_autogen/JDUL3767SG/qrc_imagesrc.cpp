@@ -1,13 +1,13 @@
 /****************************************************************************
 ** Resource object code
 **
-** Created by: The Resource Compiler for Qt version 5.14.2
+** Created by: The Resource Compiler for Qt version 5.12.1
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
 static const unsigned char qt_resource_data[] = {
-  // F:/IDEProjects/CLionProjects/Game/Source/assets/background.jpg
+  // D:/HITLearn/cpp/Game/Source/assets/background.jpg
   0x0,0x0,0xa0,0x8a,
   0xff,
   0xd8,0xff,0xe0,0x0,0x10,0x4a,0x46,0x49,0x46,0x0,0x1,0x1,0x1,0x0,0x48,0x0,
@@ -2605,7 +2605,7 @@ static const unsigned char qt_resource_struct[] = {
 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
   // :/mainwindow/background.jpg
   0x0,0x0,0x0,0x1a,0x0,0x0,0x0,0x0,0x0,0x1,0x0,0x0,0x0,0x0,
-0x0,0x0,0x1,0x80,0x89,0x7a,0x3e,0xd3,
+0x0,0x0,0x1,0x81,0x80,0x42,0x56,0xb2,
 
 };
 
@@ -2626,6 +2626,7 @@ namespace QT_NAMESPACE {
 #endif
 
 bool qRegisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *);
+
 bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *);
 
 #ifdef QT_NAMESPACE
@@ -2635,18 +2636,16 @@ bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, 
 int QT_RCC_MANGLE_NAMESPACE(qInitResources_imagesrc)();
 int QT_RCC_MANGLE_NAMESPACE(qInitResources_imagesrc)()
 {
-    int version = 3;
     QT_RCC_PREPEND_NAMESPACE(qRegisterResourceData)
-        (version, qt_resource_struct, qt_resource_name, qt_resource_data);
+        (0x2, qt_resource_struct, qt_resource_name, qt_resource_data);
     return 1;
 }
 
 int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_imagesrc)();
 int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_imagesrc)()
 {
-    int version = 3;
     QT_RCC_PREPEND_NAMESPACE(qUnregisterResourceData)
-       (version, qt_resource_struct, qt_resource_name, qt_resource_data);
+       (0x2, qt_resource_struct, qt_resource_name, qt_resource_data);
     return 1;
 }
 
