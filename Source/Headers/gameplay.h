@@ -20,6 +20,13 @@ public:
 
     ~GamePlay() override;
 
+public slots:
+    void restart_clicked();
+
+    void submit_clicked();
+
+    void back_clicked();
+
 private:
     Ui::GamePlay *ui;
 };

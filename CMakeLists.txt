@@ -20,7 +20,7 @@ include_directories(
 )
 
 add_executable(Game
-        Source/assets/imagesrc.qrc
+        Source/assets/imagesrc.qrc Source/assets/qsssrc.qrc
         Source/main.cpp
         Source/mainwindow.cpp Source/Headers/mainwindow.h Source/Forms/mainwindow.ui
         Source/gameplay.cpp Source/Headers/gameplay.h Source/Forms/gameplay.ui

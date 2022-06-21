@@ -1,3 +1,0 @@
-D:\IDEA\toolbox1111\apps\CLion\ch-0\221.5080.224\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\Game.dir/objects.a
-D:\englishaddress\Tools\mingw730_64\bin\ar.exe qc CMakeFiles\Game.dir/objects.a @CMakeFiles\Game.dir\objects1.rsp
-D:\englishaddress\Tools\mingw730_64\bin\g++.exe -Wl,--whole-archive CMakeFiles\Game.dir/objects.a -Wl,--no-whole-archive -o Game.exe -Wl,--out-implib,libGame.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Game.dir\linklibs.rsp

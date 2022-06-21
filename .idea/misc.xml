@@ -5,5 +5,8 @@
     <sourceRoots>
       <file path="$PROJECT_DIR$/Source" />
     </sourceRoots>
+    <excludeRoots>
+      <file path="$PROJECT_DIR$/qt_camke_debug" />
+    </excludeRoots>
   </component>
 </project>

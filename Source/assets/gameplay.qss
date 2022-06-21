@@ -1,5 +1,5 @@
 QPushButton{
-	font: 20pt "093-SSMengDongiTi";
+	font: 20pt "093-上首萌动体";
     color: #2f3640;
     background-color: #f5f6fa;
     border-color: #2f3640;
@@ -27,7 +27,7 @@ QPushButton::disabled{
 }
 
 QLabel{
-    font: 20pt "093-SSMengDongiTi";
+    font: 20pt "093-上首萌动体";
     color: #2f3640;
     text-align: center;
 }
