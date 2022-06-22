@@ -8,6 +8,8 @@
 #include <QFile>
 #include "gameplay.h"
 #include "Forms/ui_GamePlay.h"
+#include "mainwindow.h"
+#include <QDebug>
 
 
 GamePlay::GamePlay(QWidget *parent) :
@@ -15,26 +17,15 @@ GamePlay::GamePlay(QWidget *parent) :
     ui->setupUi(this);
     setFixedSize(QSize(1280, 800));
     setWindowTitle("第1关");
-    QFile GPQss(":/qss/gameplay.qss");
+    QFile GPQss(":/qss/qss/gameplay.qss");
     if (GPQss.open(QFile::ReadOnly))
         this->setStyleSheet(GPQss.readAll());
     ui->minumTime->setText("最快用时\n00:00:00");
     ui->nowTime->setText("当前用时\n00:00:00");
-    connect(ui->back, &QPushButton::clicked, this, &GamePlay::back_clicked);
+    connect(ui->back, &QPushButton::clicked, this, &GamePlay::hide);
+    connect(ui->back, &QPushButton::clicked, dynamic_cast<MainWindow*>(parent->parentWidget()), &MainWindow::game_select);
 }
 
 GamePlay::~GamePlay() {
     delete ui;
-}
-
-void GamePlay::restart_clicked() {
-    qDebug("restart");
-}
-
-void GamePlay::submit_clicked() {
-    qDebug("submit");
-}
-
-void GamePlay::back_clicked() {
-    this->close();
 }

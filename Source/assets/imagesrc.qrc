@@ -1,13 +1,16 @@
 <RCC>
     <qresource prefix="/mainwindow">
-        <file>background.jpg</file>
-        <file>background.png</file>
-        <file>icon.jpg</file>
-        <file>exit.png</file>
-        <file>start.png</file>
+        <file>images/icon.jpg</file>
     </qresource>
     <qresource prefix="/gameselect">
-        <file>image1.png</file>
+        <file>images/image1.png</file>
     </qresource>
-    <qresource prefix="/gameplay"/>
+    <qresource prefix="/gameplay">
+        <file>images/background.jpg</file>
+    </qresource>
+    <qresource prefix="/gamestart">
+        <file>images/background.png</file>
+        <file>images/exit.png</file>
+        <file>images/start.png</file>
+    </qresource>
 </RCC>

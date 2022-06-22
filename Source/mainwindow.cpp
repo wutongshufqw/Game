@@ -8,32 +8,45 @@
 #include "Forms/ui_MainWindow.h"
 #include "gameplay.h"
 #include "gamestart.h"
+#include <QDebug>
 
 
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
     setWindowTitle("一笔画小游戏");
-    setWindowIcon(QIcon(":/mainwindow/icon.jpg"));
+    setWindowIcon(QIcon(":/mainwindow/images/icon.jpg"));
     setFixedSize(QSize(1280, 820));
-    gameStart = new GameStart(this);
-//    gameSelect = new GameSelect(this);
-//GamePlay *gamePlay = new GamePlay(this);
-    setCentralWidget(gameStart);
+    centre = new QWidget(this);
+    gameStart = new GameStart(centre);
+    gameSelect = new GameSelect(centre);
+    gameStart->hide();
+    gameSelect->hide();
+    setCentralWidget(centre);
+    game_start();
 }
 
 MainWindow::~MainWindow() {
     delete ui;
 }
 
+void MainWindow::game_start(){
+    gameSelect->hide();
+    gameStart->show();
+//    setCentralWidget(gameStart);
+}
+
 void MainWindow::game_select() {
-    gameSelect = new GameSelect(gameStart, this);
     gameStart->hide();
-    setCentralWidget(gameSelect);
+    if(gamePlay!= nullptr)
+        gamePlay->hide();
+    gameSelect->show();
+//    setCentralWidget(gameSelect);
 }
 
-void MainWindow::playGame(GamePlay *gamePlay) {
-    setCentralWidget(gamePlay);
+void MainWindow::game_play(QWidget* widget) {
+    gamePlay = widget;
+    gameSelect->hide();
+    gamePlay->show();
+//    setCentralWidget(gamePlay);
 }
-
-

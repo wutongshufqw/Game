@@ -6,6 +6,7 @@
 #define GAME_GAMEPLAY_H
 
 #include <QWidget>
+#include <QMainWindow>
 
 
 QT_BEGIN_NAMESPACE
@@ -20,12 +21,6 @@ public:
     ~GamePlay() override;
 
 public slots:
-
-    void restart_clicked();
-
-    void submit_clicked();
-
-    void back_clicked();
 
 private:
     Ui::GamePlay *ui;

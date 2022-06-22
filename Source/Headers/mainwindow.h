@@ -21,18 +21,22 @@ Q_OBJECT
 public:
     explicit MainWindow(QWidget *parent = nullptr);
 
-    void playGame(GamePlay *gamePlay);
-
     ~MainWindow() override;
 
 public slots:
 
+    void game_start();
+
     void game_select();
+
+    void game_play(QWidget*);
 
 private:
     Ui::MainWindow *ui;
     QWidget *gameStart;
     QWidget *gameSelect;
+    QWidget *gamePlay = nullptr;
+    QWidget *centre;
 };
 
 

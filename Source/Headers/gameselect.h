@@ -15,19 +15,18 @@ namespace Ui { class GameSelect; }
 QT_END_NAMESPACE
 
 class GameSelect : public QWidget {
+Q_OBJECT
 
 public:
-    explicit GameSelect(QWidget *parent, QMainWindow *mainWindow);
+    explicit GameSelect(QWidget *parent);
 
     ~GameSelect() override;
 
-public slots:
-    void playGame_1();
+signals:
+    void play_game(QWidget*);
 
 private:
     Ui::GameSelect *ui;
-    GamePlay *gamePlay;
-    QMainWindow *mainWindow;
 };
 
 

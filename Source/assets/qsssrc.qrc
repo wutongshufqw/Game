@@ -1,9 +1,9 @@
 <RCC>
     <qresource prefix="/qss">
-        <file>gameplay.qss</file>
-        <file>No.93-ShangShouMengDongTi-2.ttf</file>
-        <file>gamestart.qss</file>
-        <file>gameselect.qss</file>
+        <file>qss/gameplay.qss</file>
+        <file>fonts/No.93-ShangShouMengDongTi-2.ttf</file>
+        <file>qss/gamestart.qss</file>
+        <file>qss/gameselect.qss</file>
 
     </qresource>
 </RCC>

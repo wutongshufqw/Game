@@ -1,0 +1,11 @@
+QWidget#GameStart{
+    border-image: url(":/gamestart/images/background.png");
+}
+
+QPushButton#start{
+    border-image: url(":/gamestart/images/start.png");
+}
+
+QPushButton#exit{
+    border-image: url(":/gamestart/images/exit.png");
+}

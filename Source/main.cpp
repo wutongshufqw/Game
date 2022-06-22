@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
-    int localFont = QFontDatabase::addApplicationFont(":/qss/No.93-ShangShouMengDongTi-2.ttf");
+    int localFont = QFontDatabase::addApplicationFont(":/qss/fonts/No.93-ShangShouMengDongTi-2.ttf");
     QFontDatabase::applicationFontFamilies(localFont);
     /*qDebug()<<localFont;
     QFontDatabase qfd;

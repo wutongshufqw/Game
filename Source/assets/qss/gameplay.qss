@@ -35,5 +35,5 @@ QLabel{
 }
 
 QWidget#GamePlay{
-    border-image: url(":/mainwindow/background.jpg");
+    border-image: url(":/gameplay/images/background.jpg");
 }

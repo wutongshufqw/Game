@@ -1,5 +1,5 @@
-QWidget#GameSelect{
-    border-image:url(":/gameselect/image1.png");
+.QWidget{
+    border-image:url(":/gameselect/images/image1.png");
 }
 
 QPushButton{

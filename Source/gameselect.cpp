@@ -9,23 +9,17 @@
 #include "Forms/ui_GameSelect.h"
 
 
-GameSelect::GameSelect(QWidget *parent, QMainWindow *mainWindow) :
+GameSelect::GameSelect(QWidget *parent) :
         QWidget(parent), ui(new Ui::GameSelect) {
     ui->setupUi(this);
-    this->mainWindow = mainWindow;
     setFixedSize(QSize(1280,800));
-    QFile GSQss(":/qss/gameselect.qss");
+    QFile GSQss(":/qss/qss/gameselect.qss");
     if (GSQss.open(QFile::ReadOnly))
         this->setStyleSheet(GSQss.readAll());
-    connect(ui->level_1,&QPushButton::clicked, this, &GameSelect::playGame_1);
+    connect(ui->level_1, &QPushButton::clicked, this, [=](){emit play_game(new GamePlay(parent));});
+    connect(this, &GameSelect::play_game, dynamic_cast<MainWindow*>(parent->parentWidget()), &MainWindow::game_play);
 }
 
 GameSelect::~GameSelect() {
     delete ui;
-}
-
-void GameSelect::playGame_1() {
-    gamePlay = new GamePlay(this);
-    this->hide();
-    dynamic_cast<MainWindow*>(mainWindow)->playGame(gamePlay);
 }

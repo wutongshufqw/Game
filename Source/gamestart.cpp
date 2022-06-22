@@ -13,11 +13,12 @@
 GameStart::GameStart(QWidget *parent) :
         QWidget(parent), ui(new Ui::GameStart) {
     ui->setupUi(this);
-    QFile GSQss(":/qss/gamestart.qss");
+    QFile GSQss(":/qss/qss/gamestart.qss");
     if (GSQss.open(QFile::ReadOnly))
         this->setStyleSheet(GSQss.readAll());
-    connect(ui->start, &QPushButton::clicked, dynamic_cast<MainWindow*>(parent), &MainWindow::game_select);
-    connect(ui->exit, &QPushButton::clicked, dynamic_cast<MainWindow*>(parent), &MainWindow::close);
+    connect(ui->start, &QPushButton::clicked, dynamic_cast<MainWindow*>(parent->parentWidget()), &MainWindow::game_select);
+    connect(ui->start, &QPushButton::clicked, this, &GameStart::hide);
+    connect(ui->exit, &QPushButton::clicked, dynamic_cast<MainWindow*>(parent->parentWidget()), &MainWindow::close);
 }
 
 GameStart::~GameStart() {
