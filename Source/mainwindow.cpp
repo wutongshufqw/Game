@@ -54,5 +54,5 @@ void MainWindow::game_play(QWidget *widget) {
 
 void MainWindow::restart() {
     app->quit();
-    QProcess::startDetached(app->applicationFilePath(),QStringList());
+    QProcess::startDetached(app->applicationFilePath(), QStringList());
 }

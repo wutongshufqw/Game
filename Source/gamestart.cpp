@@ -13,7 +13,7 @@
 GameStart::GameStart(QWidget *parent) :
         QWidget(parent), ui(new Ui::GameStart) {
     ui->setupUi(this);
-    setFixedSize(QSize(1280,800));
+    setFixedSize(QSize(1280, 800));
 
     QFile GSQss(":/qss/qss/gamestart.qss");
     if (GSQss.open(QFile::ReadOnly))

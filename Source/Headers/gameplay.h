@@ -7,7 +7,8 @@
 
 #include <QWidget>
 #include <QMainWindow>
-
+#include <QTimer>
+#include <QTime>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class GamePlay; }
@@ -22,6 +23,7 @@ public:
     ~GamePlay() override;
 
 public slots:
+
     void submit();
 
     void back();
@@ -30,9 +32,12 @@ public slots:
 
     void nextLevel();
 
+    void update_();
 private:
     Ui::GamePlay *ui;
     int level;
+    QTimer *timer;
+    QTime time;
 };
 
 
