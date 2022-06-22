@@ -23,7 +23,8 @@ public:
     ~GameSelect() override;
 
 signals:
-    void play_game(QWidget*);
+
+    void play_game(QWidget *);
 
 private:
     Ui::GameSelect *ui;

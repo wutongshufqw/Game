@@ -5,6 +5,8 @@
 #ifndef GAME_MAINWINDOW_H
 #define GAME_MAINWINDOW_H
 
+#define MAX_LEVEL 3
+
 #include <QMainWindow>
 #include "gamestart.h"
 #include "gameselect.h"
@@ -19,7 +21,7 @@ class MainWindow : public QMainWindow {
 Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QApplication *app, QWidget *parent = nullptr);
 
     ~MainWindow() override;
 
@@ -29,10 +31,13 @@ public slots:
 
     void game_select();
 
-    void game_play(QWidget*);
+    void game_play(QWidget *);
+
+    void restart();
 
 private:
     Ui::MainWindow *ui;
+    QApplication *app;
     QWidget *gameStart;
     QWidget *gameSelect;
     QWidget *gamePlay = nullptr;

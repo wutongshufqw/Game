@@ -1,10 +1,18 @@
+.QWidget{
+    border-image: url("");
+}
+
+.GameComplete{
+    border-image: url(":/gamecomplete/images/dialog.jpg");
+}
+
 QPushButton{
 /*	font: 20pt "093-上首萌动体";*/
-	font: 20pt "093-SSMengDongiTi";
-    color: #2f3640;
-    background-color: #f5f6fa;
+	font: 15pt "093-SSMengDongiTi";
+    color: #ff9933;
+    background-color: #ffffff;
     border-color: #2f3640;
-    border-radius: 15px;
+    border-radius: 13px;
     border-style: solid;
     border-width: 2px;
     padding: 5px;
@@ -25,24 +33,4 @@ QPushButton::disabled{
     color: #FFFFFF;
     background-color: #dcdde1;
     border-color: #dcdde1;
-}
-
-QLabel{
-/*    font: 20pt "093-上首萌动体";*/
-    font: 20pt "093-SSMengDongiTi";
-    color: #2f3640;
-    text-align: center;
-}
-
-QLabel#level{
-    font: 40pt "093-SSMengDongiTi";
-    color: #ff6666;
-}
-
-.QWidget{
-    border-image: url(":/gameplay/images/background.jpg");
-}
-
-QGraphicsView{
-    background-color: transparent;
 }

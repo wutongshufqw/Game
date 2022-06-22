@@ -9,23 +9,53 @@
 #include "gameplay.h"
 #include "Forms/ui_GamePlay.h"
 #include "mainwindow.h"
+#include "gamecomplete.h"
 #include <QDebug>
 
 
-GamePlay::GamePlay(QWidget *parent) :
-        QWidget(parent), ui(new Ui::GamePlay) {
+GamePlay::GamePlay(int level, QWidget *parent) :
+        QWidget(parent), ui(new Ui::GamePlay), level(level) {
     ui->setupUi(this);
+
+    qDebug()<<level;
+
     setFixedSize(QSize(1280, 800));
-    setWindowTitle("第1关");
+    setAttribute(Qt::WA_DeleteOnClose);
+
     QFile GPQss(":/qss/qss/gameplay.qss");
     if (GPQss.open(QFile::ReadOnly))
         this->setStyleSheet(GPQss.readAll());
+
     ui->minumTime->setText("最快用时\n00:00:00");
     ui->nowTime->setText("当前用时\n00:00:00");
-    connect(ui->back, &QPushButton::clicked, this, &GamePlay::hide);
-    connect(ui->back, &QPushButton::clicked, dynamic_cast<MainWindow*>(parent->parentWidget()), &MainWindow::game_select);
+    ui->level->setText(QString("第%1%2").arg(level).arg("关"));
+
+    connect(ui->back, &QPushButton::clicked, this, &GamePlay::close);
+    connect(ui->back, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()),
+            &MainWindow::game_select);
+    connect(ui->submit, &QPushButton::clicked, this, &GamePlay::submit);
+    connect(ui->restart, &QPushButton::clicked, this, &GamePlay::restart);
 }
 
 GamePlay::~GamePlay() {
     delete ui;
+}
+
+void GamePlay::submit() {
+    GameComplete gameComplete(level < MAX_LEVEL, this);
+    gameComplete.exec();
+}
+
+void GamePlay::back() {
+    emit ui->back->clicked();
+}
+
+void GamePlay::restart() {
+    this->close();
+    dynamic_cast<MainWindow *>(this->parentWidget()->parentWidget())->game_play(new GamePlay(level, this->parentWidget()));
+}
+
+void GamePlay::nextLevel(){
+    this->close();
+    dynamic_cast<MainWindow *>(this->parentWidget()->parentWidget())->game_play(new GamePlay(++level, this->parentWidget()));
 }

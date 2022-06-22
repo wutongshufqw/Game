@@ -1,97 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>GameSelect</class>
- <widget class="QWidget" name="GameSelect">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>1280</width>
-    <height>800</height>
-   </rect>
-  </property>
-  <property name="windowTitle">
-   <string>GameSelect</string>
-  </property>
-  <widget class="QWidget" name="horizontalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1281</width>
-     <height>801</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <property name="leftMargin">
-     <number>100</number>
-    </property>
-    <property name="topMargin">
-     <number>280</number>
-    </property>
-    <property name="rightMargin">
-     <number>100</number>
-    </property>
-    <item>
-     <widget class="QPushButton" name="level_1">
-      <property name="minimumSize">
-       <size>
-        <width>200</width>
-        <height>200</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>200</width>
-        <height>200</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>关卡一</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="level_2">
-      <property name="minimumSize">
-       <size>
-        <width>200</width>
-        <height>200</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>200</width>
-        <height>200</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>关卡二</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="level_3">
-      <property name="minimumSize">
-       <size>
-        <width>200</width>
-        <height>200</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>200</width>
-        <height>200</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>关卡三</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
- </widget>
- <resources/>
- <connections/>
+    <class>GameSelect</class>
+    <widget class="QWidget" name="GameSelect">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>1280</width>
+                <height>800</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>GameSelect</string>
+        </property>
+        <widget class="QWidget" name="horizontalLayoutWidget">
+            <property name="geometry">
+                <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>1281</width>
+                    <height>801</height>
+                </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+                <property name="leftMargin">
+                    <number>100</number>
+                </property>
+                <property name="topMargin">
+                    <number>280</number>
+                </property>
+                <property name="rightMargin">
+                    <number>100</number>
+                </property>
+                <item>
+                    <widget class="QPushButton" name="level_1">
+                        <property name="minimumSize">
+                            <size>
+                                <width>200</width>
+                                <height>200</height>
+                            </size>
+                        </property>
+                        <property name="maximumSize">
+                            <size>
+                                <width>200</width>
+                                <height>200</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>关卡一</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="level_2">
+                        <property name="minimumSize">
+                            <size>
+                                <width>200</width>
+                                <height>200</height>
+                            </size>
+                        </property>
+                        <property name="maximumSize">
+                            <size>
+                                <width>200</width>
+                                <height>200</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>关卡二</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="level_3">
+                        <property name="minimumSize">
+                            <size>
+                                <width>200</width>
+                                <height>200</height>
+                            </size>
+                        </property>
+                        <property name="maximumSize">
+                            <size>
+                                <width>200</width>
+                                <height>200</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>关卡三</string>
+                        </property>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+    </widget>
+    <resources/>
+    <connections/>
 </ui>

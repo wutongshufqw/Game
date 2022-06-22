@@ -14,16 +14,25 @@ namespace Ui { class GamePlay; }
 QT_END_NAMESPACE
 
 class GamePlay : public QWidget {
+Q_OBJECT
 
 public:
-    explicit GamePlay(QWidget *parent = nullptr);
+    explicit GamePlay(int level, QWidget *parent = nullptr);
 
     ~GamePlay() override;
 
 public slots:
+    void submit();
+
+    void back();
+
+    void restart();
+
+    void nextLevel();
 
 private:
     Ui::GamePlay *ui;
+    int level;
 };
 
 

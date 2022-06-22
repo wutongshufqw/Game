@@ -4,6 +4,6 @@
         <file>fonts/No.93-ShangShouMengDongTi-2.ttf</file>
         <file>qss/gamestart.qss</file>
         <file>qss/gameselect.qss</file>
-
+        <file>qss/gamecomplete.qss</file>
     </qresource>
 </RCC>

@@ -12,12 +12,16 @@
 GameSelect::GameSelect(QWidget *parent) :
         QWidget(parent), ui(new Ui::GameSelect) {
     ui->setupUi(this);
-    setFixedSize(QSize(1280,800));
+    setFixedSize(QSize(1280, 800));
+
     QFile GSQss(":/qss/qss/gameselect.qss");
     if (GSQss.open(QFile::ReadOnly))
         this->setStyleSheet(GSQss.readAll());
-    connect(ui->level_1, &QPushButton::clicked, this, [=](){emit play_game(new GamePlay(parent));});
-    connect(this, &GameSelect::play_game, dynamic_cast<MainWindow*>(parent->parentWidget()), &MainWindow::game_play);
+
+    connect(ui->level_1, &QPushButton::clicked, this, [=]() { emit play_game(new GamePlay(1, parent)); });
+    connect(ui->level_2, &QPushButton::clicked, this, [=]() { emit play_game(new GamePlay(2, parent)); });
+    connect(ui->level_3, &QPushButton::clicked, this, [=]() { emit play_game(new GamePlay(3, parent)); });
+    connect(this, &GameSelect::play_game, dynamic_cast<MainWindow *>(parent->parentWidget()), &MainWindow::game_play);
 }
 
 GameSelect::~GameSelect() {

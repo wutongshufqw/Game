@@ -13,4 +13,7 @@
         <file>images/exit.png</file>
         <file>images/start.png</file>
     </qresource>
+    <qresource prefix="/gamecomplete">
+        <file>images/dialog.jpg</file>
+    </qresource>
 </RCC>

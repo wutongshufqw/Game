@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     for(int i = 0; i < 2; i++) {
         qDebug(qsl.at(i).toStdString().c_str());
     }*/
-    MainWindow window;
+    MainWindow window(&app);
     window.show();
     return QApplication::exec();
 }

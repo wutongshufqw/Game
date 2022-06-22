@@ -1,161 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-    <class>GamePlay</class>
-    <widget class="QWidget" name="GamePlay">
-        <property name="geometry">
-            <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>1280</width>
-                <height>800</height>
-            </rect>
+ <class>GamePlay</class>
+ <widget class="QWidget" name="GamePlay">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GamePlay</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1281</width>
+     <height>802</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
+    <item>
+     <widget class="QGraphicsView" name="game">
+      <property name="minimumSize">
+       <size>
+        <width>780</width>
+        <height>780</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>780</width>
+        <height>780</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="leftMargin">
+       <number>20</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>20</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="level">
+        <property name="text">
+         <string/>
         </property>
-        <property name="windowTitle">
-            <string>GamePlay</string>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
-        <property name="styleSheet">
-            <string notr="true"/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="restart">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
-        <widget class="QWidget" name="horizontalLayoutWidget">
-            <property name="geometry">
-                <rect>
-                    <x>0</x>
-                    <y>0</y>
-                    <width>1281</width>
-                    <height>802</height>
-                </rect>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout">
-                <property name="leftMargin">
-                    <number>20</number>
-                </property>
-                <property name="topMargin">
-                    <number>10</number>
-                </property>
-                <property name="rightMargin">
-                    <number>20</number>
-                </property>
-                <property name="bottomMargin">
-                    <number>10</number>
-                </property>
-                <item>
-                    <widget class="QGraphicsView" name="graphicsView">
-                        <property name="minimumSize">
-                            <size>
-                                <width>780</width>
-                                <height>780</height>
-                            </size>
-                        </property>
-                        <property name="maximumSize">
-                            <size>
-                                <width>780</width>
-                                <height>780</height>
-                            </size>
-                        </property>
-                    </widget>
-                </item>
-                <item>
-                    <layout class="QVBoxLayout" name="verticalLayout">
-                        <property name="leftMargin">
-                            <number>20</number>
-                        </property>
-                        <property name="topMargin">
-                            <number>10</number>
-                        </property>
-                        <property name="rightMargin">
-                            <number>20</number>
-                        </property>
-                        <property name="bottomMargin">
-                            <number>10</number>
-                        </property>
-                        <item>
-                            <widget class="QPushButton" name="restart">
-                                <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                                        <horstretch>0</horstretch>
-                                        <verstretch>0</verstretch>
-                                    </sizepolicy>
-                                </property>
-                                <property name="minimumSize">
-                                    <size>
-                                        <width>200</width>
-                                        <height>100</height>
-                                    </size>
-                                </property>
-                                <property name="maximumSize">
-                                    <size>
-                                        <width>200</width>
-                                        <height>100</height>
-                                    </size>
-                                </property>
-                                <property name="text">
-                                    <string>重新开始</string>
-                                </property>
-                            </widget>
-                        </item>
-                        <item>
-                            <widget class="QLabel" name="minumTime">
-                                <property name="text">
-                                    <string>最快记录</string>
-                                </property>
-                                <property name="alignment">
-                                    <set>Qt::AlignCenter</set>
-                                </property>
-                            </widget>
-                        </item>
-                        <item>
-                            <widget class="QLabel" name="nowTime">
-                                <property name="text">
-                                    <string>当前用时</string>
-                                </property>
-                                <property name="alignment">
-                                    <set>Qt::AlignCenter</set>
-                                </property>
-                            </widget>
-                        </item>
-                        <item>
-                            <widget class="QPushButton" name="submit">
-                                <property name="minimumSize">
-                                    <size>
-                                        <width>200</width>
-                                        <height>200</height>
-                                    </size>
-                                </property>
-                                <property name="maximumSize">
-                                    <size>
-                                        <width>200</width>
-                                        <height>200</height>
-                                    </size>
-                                </property>
-                                <property name="text">
-                                    <string>确定</string>
-                                </property>
-                            </widget>
-                        </item>
-                        <item>
-                            <widget class="QPushButton" name="back">
-                                <property name="minimumSize">
-                                    <size>
-                                        <width>200</width>
-                                        <height>100</height>
-                                    </size>
-                                </property>
-                                <property name="maximumSize">
-                                    <size>
-                                        <width>200</width>
-                                        <height>100</height>
-                                    </size>
-                                </property>
-                                <property name="text">
-                                    <string>返回</string>
-                                </property>
-                            </widget>
-                        </item>
-                    </layout>
-                </item>
-            </layout>
-        </widget>
-    </widget>
-    <resources/>
-    <connections/>
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>重新开始</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="minumTime">
+        <property name="text">
+         <string>最快记录</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="nowTime">
+        <property name="text">
+         <string>当前用时</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="submit">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>确定</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="back">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>返回</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
 </ui>
