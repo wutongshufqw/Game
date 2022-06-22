@@ -9,6 +9,7 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QTime>
+#include "Level.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class GamePlay; }
@@ -38,6 +39,7 @@ private:
     int level;
     QTimer *timer;
     QTime time;
+    Level *level_;
 };
 
 

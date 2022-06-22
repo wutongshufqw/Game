@@ -23,6 +23,8 @@ GamePlay::GamePlay(int level, QWidget *parent) :
     if (GPQss.open(QFile::ReadOnly))
         this->setStyleSheet(GPQss.readAll());
 
+    level_ = new Level(level);
+
     time.setHMS(0, 0, 0, 0);
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &GamePlay::update_);

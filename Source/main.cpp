@@ -4,6 +4,7 @@
 #include <QFile>
 #include <QDebug>
 #include "mainwindow.h"
+#include "Level.h"
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
