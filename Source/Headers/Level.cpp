@@ -17,7 +17,7 @@ void Level::read(const QString& path) {
         QString time_str;
         stream >> time_str;
         time = QTime::fromString(time_str, "hh:mm:ss");
-        stream >> size;
+        stream >> size[0] >> size[1];
         stream >> num;
         lines = new Line[num];
         for(int i = 0; i < num; i++){
@@ -26,7 +26,7 @@ void Level::read(const QString& path) {
             lines[i]={QPoint(x1, y1), QPoint(x2, y2)};
         }
         file.close();
-        qDebug() << level << time << size << num;
+        qDebug() << level << time << size[0] <<size[1] << num;
         for(int i = 0; i < num; i++){
             qDebug() << lines[i].start << lines[i].end;
         }

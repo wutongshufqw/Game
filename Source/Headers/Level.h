@@ -15,7 +15,7 @@ class Level {
 private:
     int level;
     QTime time;
-    int size;
+    int size[2];
     int num;
     struct Line{
         QPoint start;
