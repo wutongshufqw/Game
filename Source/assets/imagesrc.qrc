@@ -4,6 +4,7 @@
     </qresource>
     <qresource prefix="/gameselect">
         <file>images/image1.png</file>
+        <file>images/image.png</file>
     </qresource>
     <qresource prefix="/gameplay">
         <file>images/background.jpg</file>

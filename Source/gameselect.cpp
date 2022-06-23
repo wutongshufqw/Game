@@ -22,6 +22,7 @@ GameSelect::GameSelect(QWidget *parent) :
     connect(ui->level_2, &QPushButton::clicked, this, [=]() { emit play_game(new GamePlay(2, parent)); });
     connect(ui->level_3, &QPushButton::clicked, this, [=]() { emit play_game(new GamePlay(3, parent)); });
     connect(this, &GameSelect::play_game, dynamic_cast<MainWindow *>(parent->parentWidget()), &MainWindow::game_play);
+    connect(ui->back_button, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()), &MainWindow::game_start);
 }
 
 GameSelect::~GameSelect() {
