@@ -9,7 +9,7 @@
 #include "gameplay.h"
 #include <QMouseEvent>
 
-GameComplete::GameComplete(bool nextLevel, QWidget *parent) :
+GameComplete::GameComplete(bool nextLevel, bool flag, const QString& str, QWidget *parent) :
         QDialog(parent), ui(new Ui::GameComplete) {
     ui->setupUi(this);
     this->setWindowFlags(Qt::FramelessWindowHint | Qt::Dialog);
@@ -20,7 +20,12 @@ GameComplete::GameComplete(bool nextLevel, QWidget *parent) :
     QRegion region(polygon);//根据这些点构造这个区域
     setMask(region);
 
-    ui->next->setEnabled(nextLevel);
+    if(flag)
+        ui->message->setText("You Win!\n用时：" + str);
+    else
+        ui->message->setText("You Lose!");
+
+    ui->next->setEnabled(nextLevel && flag);
 
     QFile GPQss(":/qss/qss/gamecomplete.qss");
     if (GPQss.open(QFile::ReadOnly))
@@ -39,8 +44,8 @@ GameComplete::~GameComplete() {
 }
 
 void GameComplete::mousePressEvent(QMouseEvent *event) {
-    this->windowPos = this->pos();                // 获得部件当前位置
-    this->mousePos = event->globalPos();     // 获得
+    this->windowPos = this->pos();
+    this->mousePos = event->globalPos();
     this->dPos = mousePos - windowPos;
 }
 

@@ -10,6 +10,7 @@
 #include "Forms/ui_GamePlay.h"
 #include "mainwindow.h"
 #include "gamecomplete.h"
+#include "gameshow.h"
 
 
 GamePlay::GamePlay(int level, QWidget *parent) :
@@ -30,7 +31,7 @@ GamePlay::GamePlay(int level, QWidget *parent) :
     connect(timer, &QTimer::timeout, this, &GamePlay::update_);
     timer->start(1000);
 
-    ui->minumTime->setText("最快用时\n00:00:00");
+    ui->minumTime->setText("最快用时\n" + level_->getTime().toString("hh:mm:ss"));
     ui->nowTime->setText("当前用时\n00:00:00");
     ui->level->setText(QString("第%1%2").arg(level).arg("关"));
 
@@ -39,6 +40,8 @@ GamePlay::GamePlay(int level, QWidget *parent) :
             &MainWindow::game_select);
     connect(ui->submit, &QPushButton::clicked, this, &GamePlay::submit);
     connect(ui->restart, &QPushButton::clicked, this, &GamePlay::restart);
+
+    gameShow = new GameShow(level_, ui->game);
 }
 
 GamePlay::~GamePlay() {
@@ -47,8 +50,15 @@ GamePlay::~GamePlay() {
 
 void GamePlay::submit() {
     timer->stop();
-    GameComplete gameComplete(level < MAX_LEVEL, this);
-    gameComplete.exec();
+    if(dynamic_cast<GameShow*>(gameShow)->finish()) {
+        GameComplete gameComplete(level < MAX_LEVEL, true, time.toString(), this);
+        level_->setTime(time);
+        level_->write();
+        gameComplete.exec();
+    } else {
+        GameComplete gameComplete(level < MAX_LEVEL, false, time.toString(), this);
+        gameComplete.exec();
+    }
 }
 
 void GamePlay::back() {
@@ -71,5 +81,5 @@ void GamePlay::update_() {
     static quint32 time_out = 0;
     time_out++;
     time = time.addSecs(1);
-    ui->nowTime->setText("当前用时\n"+time.toString("hh:mm:ss"));
+    ui->nowTime->setText("当前用时\n" + time.toString("hh:mm:ss"));
 }

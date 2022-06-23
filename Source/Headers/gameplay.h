@@ -34,12 +34,14 @@ public slots:
     void nextLevel();
 
     void update_();
+
 private:
     Ui::GamePlay *ui;
     int level;
     QTimer *timer;
     QTime time;
     Level *level_;
+    QWidget *gameShow;
 };
 
 

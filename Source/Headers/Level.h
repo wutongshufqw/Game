@@ -11,21 +11,39 @@
 #include <QTextStream>
 #include <QDebug>
 
+struct Line {
+    QPoint start;
+    QPoint end;
+};
+
 class Level {
 private:
     int level;
     QTime time;
     int size[2];
     int num;
-    struct Line{
-        QPoint start;
-        QPoint end;
-    };
     Line *lines;
+    QString path;
 public:
-    Level(int number);
+    int getLevel() const;
+
+    const QTime &getTime() const;
+
+    const int *getSize() const;
+
+    int getNum() const;
+
+    Line *const getLines() const;
+
+    void setTime(const QTime &time);
+
+    explicit Level(int number);
+
+    void read();
+
     void write();
-    void read(const QString& path);
+
+    ~Level();
 };
 
 

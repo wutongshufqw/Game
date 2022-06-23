@@ -20,13 +20,15 @@ include_directories(
 )
 
 add_executable(Game
-        Source/assets/imagesrc.qrc Source/assets/qsssrc.qrc Source/assets/levelsrc.qrc
+        Source/assets/imagesrc.qrc Source/assets/qsssrc.qrc Source/assets/musicsrc.qrc
         Source/main.cpp
         Source/gameplay.cpp Source/Headers/gameplay.h Source/Forms/gameplay.ui
         Source/gameselect.cpp Source/Headers/gameselect.h Source/Forms/gameselect.ui
         Source/mainwindow.cpp Source/Headers/mainwindow.h Source/Forms/mainwindow.ui
         Source/gamestart.cpp Source/Headers/gamestart.h Source/Forms/gamestart.ui
-        Source/gamecomplete.cpp Source/Headers/gamecomplete.h Source/Forms/gamecomplete.ui Source/Headers/Level.cpp Source/Headers/Level.h)
+        Source/gamecomplete.cpp Source/Headers/gamecomplete.h Source/Forms/gamecomplete.ui
+        Source/Level.cpp Source/Headers/Level.h
+        Source/gameshow.cpp Source/Headers/gameshow.h Source/Forms/gameshow.ui)
 target_link_libraries(Game
         Qt5::Core
         Qt5::Gui
