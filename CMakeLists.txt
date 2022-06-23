@@ -12,6 +12,7 @@ find_package(Qt5 COMPONENTS
         Core
         Gui
         Widgets
+        Multimedia
         REQUIRED)
 
 include_directories(
@@ -33,6 +34,7 @@ target_link_libraries(Game
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets
+        Qt5::Multimedia
         )
 
 if (WIN32)

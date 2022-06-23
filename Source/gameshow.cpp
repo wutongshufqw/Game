@@ -7,7 +7,6 @@
 #include "gameshow.h"
 #include "Forms/ui_GameShow.h"
 #include <QPainter>
-#include <QDebug>
 #include <QMouseEvent>
 #include <cmath>
 
@@ -191,8 +190,6 @@ void GameShow::mousePressEvent(QMouseEvent *event) {
         now = temp;
     else
         now = inCircle(event->pos());
-    qDebug() << now;
-    qDebug() << temp;
     nowPoint = event->pos();
     update();
 }

@@ -6,10 +6,8 @@
 
 #include "mainwindow.h"
 #include "Forms/ui_MainWindow.h"
-#include "gameplay.h"
 #include "gamestart.h"
 #include <QProcess>
-#include <QDebug>
 
 MainWindow::MainWindow(QApplication *app, QWidget *parent) :
         QMainWindow(parent), ui(new Ui::MainWindow), app(app) {
@@ -24,6 +22,12 @@ MainWindow::MainWindow(QApplication *app, QWidget *parent) :
     gameStart->hide();
     gameSelect->hide();
     setCentralWidget(centre);
+
+    player = new QMediaPlayer(this);
+    player->setMedia(QUrl(":/media/music/background.wav"));
+    player->setVolume(80);
+    player->play();
+
     game_start();
 
     connect(ui->exitGame, &QAction::triggered, this, &QMainWindow::close);

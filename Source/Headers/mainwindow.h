@@ -11,6 +11,7 @@
 #include "gamestart.h"
 #include "gameselect.h"
 #include "gameplay.h"
+#include <QtMultimedia/QMediaPlayer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -41,6 +42,7 @@ private:
     QWidget *gameSelect;
     QWidget *gamePlay = nullptr;
     QWidget *centre;
+    QMediaPlayer *player;
 };
 
 
