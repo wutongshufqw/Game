@@ -62,6 +62,7 @@ private:
     std::map<int, bool> flag;
     std::map<int, bool> line;
     bool *correct;
+    bool flag1 = false;
 
     Line *lines;
     std::vector<Line> red_lines;
