@@ -45,4 +45,5 @@ QLabel#level{
 
 QGraphicsView{
     background-color: transparent;
+    border: none;
 }

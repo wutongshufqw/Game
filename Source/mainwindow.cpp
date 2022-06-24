@@ -45,8 +45,6 @@ void MainWindow::game_start() {
 
 void MainWindow::game_select() {
     gameStart->hide();
-    if (gamePlay != nullptr)
-        gamePlay->hide();
     gameSelect->show();
 }
 

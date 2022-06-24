@@ -9,7 +9,6 @@
 #include <QPainter>
 #include <QMouseEvent>
 #include <cmath>
-#include <QDebug>
 
 GameShow::GameShow(Level *level, QWidget *parent) :
         QWidget(parent), ui(new Ui::GameShow), level(level) {
@@ -197,7 +196,6 @@ void GameShow::mousePressEvent(QMouseEvent *event) {
 
 void GameShow::mouseMoveEvent(QMouseEvent *event) {
     nowPoint = event->pos();
-    qDebug() << now << flag1;
     if(now!=-1 && inCircle(event->pos()) != -1 && now != inCircle(event->pos())) {
         if(!existence({QPoint(now / level->getSize()[1], now % level->getSize()[1]),
                        QPoint(inCircle(event->pos()) / level->getSize()[1],

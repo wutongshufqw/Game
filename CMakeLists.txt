@@ -8,6 +8,8 @@ set(CMAKE_AUTOUIC ON)
 
 set(CMAKE_PREFIX_PATH "$ENV{QT_CMAKE}")
 
+set(CMAKE_EXE_LINKER_FLAGS -static)
+
 find_package(Qt5 COMPONENTS
         Core
         Gui
@@ -20,7 +22,7 @@ include_directories(
         ${PROJECT_SOURCE_DIR}/Source/Headers
 )
 
-add_executable(Game
+add_executable(Game WIN32
         Source/assets/imagesrc.qrc Source/assets/qsssrc.qrc Source/assets/musicsrc.qrc
         Source/main.cpp
         Source/gameplay.cpp Source/Headers/gameplay.h Source/Forms/gameplay.ui
