@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/media">
         <file>music/background.wav</file>
+        <file>music/press.wav</file>
     </qresource>
 </RCC>

@@ -38,8 +38,13 @@ GamePlay::GamePlay(int level, QWidget *parent) :
     connect(ui->back, &QPushButton::clicked, this, &GamePlay::close);
     connect(ui->back, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()),
             &MainWindow::game_select);
+    connect(ui->back, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()),&MainWindow::press);
+
+    connect(ui->submit, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()),&MainWindow::press);
     connect(ui->submit, &QPushButton::clicked, this, &GamePlay::submit);
+
     connect(ui->restart, &QPushButton::clicked, this, &GamePlay::restart);
+    connect(ui->restart, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()),&MainWindow::press);
 
     gameShow = new GameShow(level_, ui->game);
 }

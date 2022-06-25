@@ -7,6 +7,7 @@
 #include "gamecomplete.h"
 #include "Forms/ui_GameComplete.h"
 #include "gameplay.h"
+#include "mainwindow.h"
 #include <QMouseEvent>
 
 GameComplete::GameComplete(bool nextLevel, bool flag, const QString& str, QWidget *parent) :
@@ -33,10 +34,15 @@ GameComplete::GameComplete(bool nextLevel, bool flag, const QString& str, QWidge
 
     connect(ui->back, &QPushButton::clicked, this, &QDialog::close);
     connect(ui->back, &QPushButton::clicked, dynamic_cast<GamePlay *>(parent), &GamePlay::back);
+    connect(ui->back, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()->parentWidget()),&MainWindow::press);
+
     connect(ui->replay, &QPushButton::clicked, this, &QDialog::close);
     connect(ui->replay, &QPushButton::clicked, dynamic_cast<GamePlay *>(parent), &GamePlay::restart);
+    connect(ui->replay, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()->parentWidget()),&MainWindow::press);
+
     connect(ui->next, &QPushButton::clicked, this, &QDialog::close);
     connect(ui->next, &QPushButton::clicked, dynamic_cast<GamePlay *>(parent), &GamePlay::nextLevel);
+    connect(ui->next, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()->parentWidget()),&MainWindow::press);
 }
 
 GameComplete::~GameComplete() {

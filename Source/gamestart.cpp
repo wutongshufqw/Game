@@ -22,7 +22,10 @@ GameStart::GameStart(QWidget *parent) :
     connect(ui->start, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()),
             &MainWindow::game_select);
     connect(ui->start, &QPushButton::clicked, this, &GameStart::hide);
+    connect(ui->start, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()), &MainWindow::press);
+
     connect(ui->exit, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()), &MainWindow::close);
+    connect(ui->exit, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()), &MainWindow::press);
 }
 
 GameStart::~GameStart() {

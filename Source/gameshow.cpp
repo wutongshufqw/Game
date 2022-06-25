@@ -6,6 +6,7 @@
 
 #include "gameshow.h"
 #include "Forms/ui_GameShow.h"
+#include "mainwindow.h"
 #include <QPainter>
 #include <QMouseEvent>
 #include <cmath>
@@ -211,6 +212,7 @@ void GameShow::mouseMoveEvent(QMouseEvent *event) {
                                      QPoint(now / level->getSize()[1], now % level->getSize()[1])});
             }
         }
+        dynamic_cast<MainWindow*>(parentWidget()->parentWidget())->press();
     }else if(!flag1 && inCircle(event->pos())!=-1){
         flag1 = true;
         now = inCircle(event->pos());

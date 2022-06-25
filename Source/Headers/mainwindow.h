@@ -11,7 +11,6 @@
 #include "gamestart.h"
 #include "gameselect.h"
 #include "gameplay.h"
-#include <QtMultimedia/QMediaPlayer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,7 +20,7 @@ class MainWindow : public QMainWindow {
 Q_OBJECT
 
 public:
-    explicit MainWindow(QApplication *app, QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
 
     ~MainWindow() override;
 
@@ -33,16 +32,17 @@ public slots:
 
     void game_play(QWidget *);
 
-    void restart();
+    static void restart();
+
+    void press();
 
 private:
     Ui::MainWindow *ui;
-    QApplication *app;
     QWidget *gameStart;
     QWidget *gameSelect;
-    QWidget *gamePlay = nullptr;
+    QWidget *gamePlay{};
     QWidget *centre;
-    QMediaPlayer *player;
+    QDateTime curDateTime;
 };
 
 
