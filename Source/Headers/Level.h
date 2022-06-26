@@ -18,14 +18,19 @@ struct Line {
 
 class Level {
 private:
-    int level;
+    int level{};
     QTime time;
-    int size[2];
-    int num;
-    Line *lines;
+    int size[2]{};
+    int num{};
+    Line *lines{};
+
+private:
     QString path;
+
 public:
-    int getLevel() const;
+    void setLines(Line *lines);
+
+    __attribute__((unused)) int getLevel() const;
 
     const QTime &getTime() const;
 
@@ -33,11 +38,13 @@ public:
 
     int getNum() const;
 
-    Line *const getLines() const;
+    Line *getLines() const;
 
-    void setTime(const QTime &time);
+    void setTime(const QTime &qTime);
 
     explicit Level(int number);
+
+    Level(int difficulty, int level, bool create = false);
 
     void read();
 

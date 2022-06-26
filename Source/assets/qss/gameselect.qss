@@ -29,3 +29,7 @@ QPushButton::disabled{
     background-color: #dcdde1;
     border-color: #dcdde1;
 }
+
+QWidget#widget_button{
+    border-image: url("");
+}

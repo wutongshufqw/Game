@@ -31,6 +31,8 @@ void Level::read() {
     }
 }
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "NullDereference"
 void Level::write(){
     QFile file(path);
     if (file.open(QIODevice::WriteOnly)) {
@@ -48,8 +50,9 @@ void Level::write(){
         qDebug() << "open file failed";
     }
 }
+#pragma clang diagnostic pop
 
-int Level::getLevel() const {
+__attribute__((unused)) int Level::getLevel() const {
     return level;
 }
 
@@ -65,15 +68,41 @@ int Level::getNum() const {
     return num;
 }
 
-Line *const Level::getLines() const {
+Line *Level::getLines() const {
     return lines;
 }
 
-void Level::setTime(const QTime &time) {
-    if(time < Level::time)
-        Level::time = time;
+void Level::setTime(const QTime &qTime) {
+    if(qTime < Level::time)
+        Level::time = qTime;
 }
 
 Level::~Level() {
     delete[] lines;
+}
+
+Level::Level(int difficulty, int level, bool create) {
+    path = QString("./level/difficulty%1-%2.txt").arg(difficulty).arg(level);
+    if(create){
+        this->level = level;
+        time.setHMS(11,59,59,999);
+        size[0]=difficulty+2,size[1]=difficulty+2;
+        srand((unsigned)clock());
+        switch(difficulty){
+            case 1:
+                num = (rand()%(15-6+1))+6;break;
+            case 2:
+                num = (rand()%(30-10+1))+10;break;
+            case 3:
+                num = (rand()%(50-20+1))+20;break;
+            default:
+                break;
+        }
+    }else{
+        read();
+    }
+}
+
+void Level::setLines(Line *lines) {
+    Level::lines = lines;
 }

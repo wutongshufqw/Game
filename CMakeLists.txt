@@ -22,7 +22,7 @@ include_directories(
         ${PROJECT_SOURCE_DIR}/Source/Headers
 )
 
-add_executable(Game WIN32
+add_executable(Game
         Source/assets/imagesrc.qrc Source/assets/qsssrc.qrc Source/assets/musicsrc.qrc
         Source/main.cpp
         Source/gameplay.cpp Source/Headers/gameplay.h Source/Forms/gameplay.ui
@@ -31,7 +31,8 @@ add_executable(Game WIN32
         Source/gamestart.cpp Source/Headers/gamestart.h Source/Forms/gamestart.ui
         Source/gamecomplete.cpp Source/Headers/gamecomplete.h Source/Forms/gamecomplete.ui
         Source/Level.cpp Source/Headers/Level.h
-        Source/gameshow.cpp Source/Headers/gameshow.h Source/Forms/gameshow.ui)
+        Source/gameshow.cpp Source/Headers/gameshow.h Source/Forms/gameshow.ui
+        Source/GameCreator.cpp Source/Headers/GameCreator.h)
 target_link_libraries(Game
         Qt5::Core
         Qt5::Gui

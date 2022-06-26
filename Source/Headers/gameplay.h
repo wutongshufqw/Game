@@ -19,7 +19,7 @@ class GamePlay : public QWidget {
 Q_OBJECT
 
 public:
-    explicit GamePlay(int level, QWidget *parent = nullptr);
+    explicit GamePlay(int level, QWidget *parent = nullptr, bool ai = false, int difficulty = 0);
 
     ~GamePlay() override;
 
@@ -42,6 +42,8 @@ private:
     QTime time;
     Level *level_;
     QWidget *gameShow;
+    bool ai;
+    int difficulty;
 };
 
 

@@ -11,6 +11,8 @@
 #include <QMouseEvent>
 #include <cmath>
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "bugprone-integer-division"
 GameShow::GameShow(Level *level, QWidget *parent) :
         QWidget(parent), ui(new Ui::GameShow), level(level) {
     ui->setupUi(this);
@@ -41,6 +43,7 @@ GameShow::GameShow(Level *level, QWidget *parent) :
     for(int i = 0; i < level->getNum(); i++)
         flag[lines[i].start.x()*level->getSize()[1] + lines[i].start.y()] = flag[lines[i].end.x()*level->getSize()[1] + lines[i].end.y()] = true, correct[i] = false;
 }
+#pragma clang diagnostic pop
 
 GameShow::~GameShow() {
     delete ui;
@@ -207,12 +210,14 @@ void GameShow::mouseMoveEvent(QMouseEvent *event) {
                 correct[inLine(last, now)] = true;
                 green_lines.push_back({QPoint(last / level->getSize()[1], last % level->getSize()[1]),
                                        QPoint(now / level->getSize()[1], now % level->getSize()[1])});
+                step.push_back(true);
             }else{
                 red_lines.push_back({QPoint(last / level->getSize()[1], last % level->getSize()[1]),
                                      QPoint(now / level->getSize()[1], now % level->getSize()[1])});
+                step.push_back(false);
             }
+            dynamic_cast<MainWindow*>(parentWidget()->parentWidget())->press();
         }
-        dynamic_cast<MainWindow*>(parentWidget()->parentWidget())->press();
     }else if(!flag1 && inCircle(event->pos())!=-1){
         flag1 = true;
         now = inCircle(event->pos());
@@ -273,4 +278,19 @@ bool GameShow::finish() {
         if(!correct[i])
             return false;
     return true;
+}
+
+void GameShow::stepBack(){
+    if(!step.empty()){
+        if(step.back()) {
+            temp = green_lines.back().end.x() * level->getSize()[1] + green_lines.back().end.y();
+            correct[inLine(green_lines.back().start.x() * level->getSize()[1] + green_lines.back().start.y(), temp)] = false;
+            green_lines.pop_back();
+        }else{
+            temp = red_lines.back().end.x() * level->getSize()[1] + red_lines.back().end.y();
+            red_lines.pop_back();
+        }
+        step.pop_back();
+    }
+    update();
 }

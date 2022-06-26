@@ -17,16 +17,18 @@ class GameShow : public QWidget {
 Q_OBJECT
 
 public:
-    explicit GameShow(Level *level, QWidget *parent = nullptr);
+    explicit GameShow(Level *level, QWidget *parent);
 
     bool finish();
+
+    void stepBack();
 
     ~GameShow() override;
 
 
 private:
-    Ui::GameShow *ui;
-    Level *level;
+    Ui::GameShow *ui{};
+    Level *level{};
 
     void paintEvent(QPaintEvent *event) override;
 
@@ -43,17 +45,17 @@ private:
     QPoint windowPos;
     QPoint mousePos;
     QPoint dPos;
-    QPoint *points;
+    QPoint *points{};
     QPoint topLeft;
     QPoint bottomRight;
 
-    double wid;
-    double hei;
+    double wid{};
+    double hei{};
 
-    int round0;
-    int round1;
-    int round2;
-    int round3;
+    int round0{};
+    int round1{};
+    int round2{};
+    int round3{};
 
     int now = -1;
     int last = -1;
@@ -61,12 +63,14 @@ private:
 
     std::map<int, bool> flag;
     std::map<int, bool> line;
-    bool *correct;
+    bool *correct{};
     bool flag1 = false;
 
-    Line *lines;
-    std::vector<Line> red_lines;
-    std::vector<Line> green_lines;
+    Line *lines{};
+    std::list<Line> red_lines;
+    std::list<Line> green_lines;
+
+    std::list<bool> step;
 
     QPoint nowPoint;
 };
