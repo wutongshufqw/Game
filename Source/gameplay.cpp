@@ -67,12 +67,19 @@ GamePlay::~GamePlay() {
 void GamePlay::submit() {
     timer->stop();
     if(dynamic_cast<GameShow*>(gameShow)->finish()) {
-        GameComplete gameComplete(level < MAX_LEVEL, true, time.toString(), this);
+        if(ai)
+            GameComplete gameComplete(true, true, time.toString(), this);
+        else
+            GameComplete gameComplete(level < MAX_LEVEL, true, time.toString(), this);
+
         level_->setTime(time);
         level_->write();
         gameComplete.exec();
     } else {
-        GameComplete gameComplete(level < MAX_LEVEL, false, time.toString(), this);
+        if(ai)
+            GameComplete gameComplete(true, false, time.toString(), this);
+        else
+            GameComplete gameComplete(level < MAX_LEVEL, false, time.toString(), this);
         gameComplete.exec();
     }
 }
