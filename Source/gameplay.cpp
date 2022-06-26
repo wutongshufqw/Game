@@ -14,7 +14,7 @@
 #include "GameCreator.h"
 
 
-GamePlay::GamePlay(int level, QWidget *parent, bool ai, int difficulty) :
+GamePlay::GamePlay(int level, QWidget *parent, bool ai, int difficulty, bool restart) :
         QWidget(parent), ui(new Ui::GamePlay), level(level), ai(ai), difficulty(difficulty) {
     ui->setupUi(this);
 
@@ -25,11 +25,11 @@ GamePlay::GamePlay(int level, QWidget *parent, bool ai, int difficulty) :
     if (GPQss.open(QFile::ReadOnly))
         this->setStyleSheet(GPQss.readAll());
 
-    if(ai){
-        GameCreator(difficulty,level);
-        level_ = new Level(difficulty,level);
-    }
-    else
+    if (ai) {
+        if(!restart)
+            GameCreator(difficulty, level);
+        level_ = new Level(difficulty, level);
+    } else
         level_ = new Level(level);
 
 
@@ -42,21 +42,25 @@ GamePlay::GamePlay(int level, QWidget *parent, bool ai, int difficulty) :
     ui->nowTime->setText("当前用时\n00:00:00");
     ui->level->setText(QString("第%1%2").arg(level).arg("关"));
 
-    gameShow = new GameShow(level_, ui->game);
+    if(ai)
+        gameShow = new GameShow(level_, ui->game, true);
+    else
+        gameShow = new GameShow(level_, ui->game);
 
     connect(ui->back, &QPushButton::clicked, this, &GamePlay::close);
     connect(ui->back, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()),
             &MainWindow::game_select);
-    connect(ui->back, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()),&MainWindow::press);
+    connect(ui->back, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()), &MainWindow::press);
 
-    connect(ui->step_back, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()), &MainWindow::press);
-    connect(ui->step_back, &QPushButton::clicked, dynamic_cast<GameShow*>(gameShow), &GameShow::stepBack);
+    connect(ui->step_back, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()),
+            &MainWindow::press);
+    connect(ui->step_back, &QPushButton::clicked, dynamic_cast<GameShow *>(gameShow), &GameShow::stepBack);
 
-    connect(ui->submit, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()),&MainWindow::press);
+    connect(ui->submit, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()), &MainWindow::press);
     connect(ui->submit, &QPushButton::clicked, this, &GamePlay::submit);
 
     connect(ui->restart, &QPushButton::clicked, this, &GamePlay::restart);
-    connect(ui->restart, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()),&MainWindow::press);
+    connect(ui->restart, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()), &MainWindow::press);
 
 }
 
@@ -66,22 +70,21 @@ GamePlay::~GamePlay() {
 
 void GamePlay::submit() {
     timer->stop();
-    if(dynamic_cast<GameShow*>(gameShow)->finish()) {
-        if(ai)
-            GameComplete gameComplete(true, true, time.toString(), this);
+    GameComplete *complete;
+    if (dynamic_cast<GameShow *>(gameShow)->finish()) {
+        if (ai)
+            complete = new GameComplete(true, true, time.toString(), this);
         else
-            GameComplete gameComplete(level < MAX_LEVEL, true, time.toString(), this);
-
+            complete = new GameComplete(level < MAX_LEVEL, true, time.toString(), this);
         level_->setTime(time);
         level_->write();
-        gameComplete.exec();
     } else {
-        if(ai)
-            GameComplete gameComplete(true, false, time.toString(), this);
+        if (ai)
+            complete = new GameComplete(true, false, time.toString(), this);
         else
-            GameComplete gameComplete(level < MAX_LEVEL, false, time.toString(), this);
-        gameComplete.exec();
+            complete = new GameComplete(level < MAX_LEVEL, false, time.toString(), this);
     }
+    complete->exec();
 }
 
 void GamePlay::back() {
@@ -90,9 +93,9 @@ void GamePlay::back() {
 
 void GamePlay::restart() {
     this->close();
-    if(ai)
+    if (ai)
         dynamic_cast<MainWindow *>(this->parentWidget()->parentWidget())->game_play(
-                new GamePlay(level, this->parentWidget(), true, difficulty));
+                new GamePlay(level, this->parentWidget(), true, difficulty, true));
     else
         dynamic_cast<MainWindow *>(this->parentWidget()->parentWidget())->game_play(
                 new GamePlay(level, this->parentWidget()));
@@ -100,9 +103,9 @@ void GamePlay::restart() {
 
 void GamePlay::nextLevel() {
     this->close();
-    if(ai)
+    if (ai)
         dynamic_cast<MainWindow *>(this->parentWidget()->parentWidget())->game_play(
-                new GamePlay(++level, this->parentWidget(),true, difficulty));
+                new GamePlay(++level, this->parentWidget(), true, difficulty));
     else
         dynamic_cast<MainWindow *>(this->parentWidget()->parentWidget())->game_play(
                 new GamePlay(++level, this->parentWidget()));

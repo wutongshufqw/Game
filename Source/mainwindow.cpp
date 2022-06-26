@@ -12,7 +12,7 @@
 #include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
-        QMainWindow(parent), ui(new Ui::MainWindow){
+        QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
     setWindowTitle("一笔画小游戏");
     setWindowIcon(QIcon(":/mainwindow/images/icon.jpg"));
@@ -25,7 +25,7 @@ MainWindow::MainWindow(QWidget *parent) :
     gameSelect->hide();
     setCentralWidget(centre);
 
-    auto *startsound=new QSound(":/media/music/background.wav",this);
+    auto *startsound = new QSound(":/media/music/background.wav", this);
     startsound->play();//
     startsound->setLoops(-1);
 
@@ -61,7 +61,7 @@ void MainWindow::restart() {
 }
 
 void MainWindow::press() {
-    auto *hover=new QSound(":/media/music/press.wav",this);
+    auto *hover = new QSound(":/media/music/press.wav", this);
     hover->play();
     hover->setLoops(0);
 }

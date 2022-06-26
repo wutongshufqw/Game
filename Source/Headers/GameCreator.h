@@ -12,6 +12,7 @@
 class GameCreator {
 public:
     GameCreator(int difficulty, int level);
+
 private:
     Level *level;
 };

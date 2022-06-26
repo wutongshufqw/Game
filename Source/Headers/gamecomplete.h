@@ -16,7 +16,7 @@ class GameComplete : public QDialog {
 Q_OBJECT
 
 public:
-    explicit GameComplete(bool nextLevel, bool flag, const QString& str, QWidget *parent = nullptr);
+    explicit GameComplete(bool nextLevel, bool flag, const QString &str, QWidget *parent = nullptr);
 
     ~GameComplete() override;
 

@@ -10,7 +10,7 @@
 #include "mainwindow.h"
 #include <QMouseEvent>
 
-GameComplete::GameComplete(bool nextLevel, bool flag, const QString& str, QWidget *parent) :
+GameComplete::GameComplete(bool nextLevel, bool flag, const QString &str, QWidget *parent) :
         QDialog(parent), ui(new Ui::GameComplete) {
     ui->setupUi(this);
     this->setWindowFlags(Qt::FramelessWindowHint | Qt::Dialog);
@@ -21,7 +21,7 @@ GameComplete::GameComplete(bool nextLevel, bool flag, const QString& str, QWidge
     QRegion region(polygon);//根据这些点构造这个区域
     setMask(region);
 
-    if(flag)
+    if (flag)
         ui->message->setText("You Win!\n用时：" + str);
     else
         ui->message->setText("You Lose!");
@@ -34,15 +34,18 @@ GameComplete::GameComplete(bool nextLevel, bool flag, const QString& str, QWidge
 
     connect(ui->back, &QPushButton::clicked, this, &QDialog::close);
     connect(ui->back, &QPushButton::clicked, dynamic_cast<GamePlay *>(parent), &GamePlay::back);
-    connect(ui->back, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()->parentWidget()),&MainWindow::press);
+    connect(ui->back, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()->parentWidget()),
+            &MainWindow::press);
 
     connect(ui->replay, &QPushButton::clicked, this, &QDialog::close);
     connect(ui->replay, &QPushButton::clicked, dynamic_cast<GamePlay *>(parent), &GamePlay::restart);
-    connect(ui->replay, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()->parentWidget()),&MainWindow::press);
+    connect(ui->replay, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()->parentWidget()),
+            &MainWindow::press);
 
     connect(ui->next, &QPushButton::clicked, this, &QDialog::close);
     connect(ui->next, &QPushButton::clicked, dynamic_cast<GamePlay *>(parent), &GamePlay::nextLevel);
-    connect(ui->next, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()->parentWidget()),&MainWindow::press);
+    connect(ui->next, &QPushButton::clicked, dynamic_cast<MainWindow *>(parent->parentWidget()->parentWidget()),
+            &MainWindow::press);
 }
 
 GameComplete::~GameComplete() {

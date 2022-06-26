@@ -33,7 +33,8 @@ void Level::read() {
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "NullDereference"
-void Level::write(){
+
+void Level::write() {
     QFile file(path);
     if (file.open(QIODevice::WriteOnly)) {
         QTextStream stream(&file);
@@ -50,6 +51,7 @@ void Level::write(){
         qDebug() << "open file failed";
     }
 }
+
 #pragma clang diagnostic pop
 
 __attribute__((unused)) int Level::getLevel() const {
@@ -73,7 +75,7 @@ Line *Level::getLines() const {
 }
 
 void Level::setTime(const QTime &qTime) {
-    if(qTime < Level::time)
+    if (qTime < Level::time)
         Level::time = qTime;
 }
 
@@ -83,22 +85,25 @@ Level::~Level() {
 
 Level::Level(int difficulty, int level, bool create) {
     path = QString("./level/difficulty%1-%2.txt").arg(difficulty).arg(level);
-    if(create){
+    if (create) {
         this->level = level;
-        time.setHMS(11,59,59,999);
-        size[0]=difficulty+2,size[1]=difficulty+2;
-        srand((unsigned)clock());
-        switch(difficulty){
+        time.setHMS(11, 59, 59, 999);
+        size[0] = difficulty + 2, size[1] = difficulty + 2;
+        srand((unsigned) clock());
+        switch (difficulty) {
             case 1:
-                num = (rand()%(15-6+1))+6;break;
+                num = (rand() % (15 - 6 + 1)) + 6;
+                break;
             case 2:
-                num = (rand()%(30-10+1))+10;break;
+                num = (rand() % (30 - 10 + 1)) + 10;
+                break;
             case 3:
-                num = (rand()%(50-20+1))+20;break;
+                num = (rand() % (50 - 20 + 1)) + 20;
+                break;
             default:
                 break;
         }
-    }else{
+    } else {
         read();
     }
 }

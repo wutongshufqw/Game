@@ -19,7 +19,7 @@ class GamePlay : public QWidget {
 Q_OBJECT
 
 public:
-    explicit GamePlay(int level, QWidget *parent = nullptr, bool ai = false, int difficulty = 0);
+    explicit GamePlay(int level, QWidget *parent = nullptr, bool ai = false, int difficulty = 0, bool restart = false);
 
     ~GamePlay() override;
 

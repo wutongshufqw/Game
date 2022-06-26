@@ -17,7 +17,7 @@ class GameShow : public QWidget {
 Q_OBJECT
 
 public:
-    explicit GameShow(Level *level, QWidget *parent);
+    explicit GameShow(Level *level, QWidget *parent, bool ai = false);
 
     bool finish();
 
@@ -39,7 +39,9 @@ private:
     void mouseReleaseEvent(QMouseEvent *event) override;
 
     int inCircle(const QPoint &point);
+
     int inLine(int a, int b);
+
     bool existence(Line l);
 
     QPoint windowPos;
@@ -73,6 +75,8 @@ private:
     std::list<bool> step;
 
     QPoint nowPoint;
+
+    bool ai;
 };
 
 
