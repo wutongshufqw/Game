@@ -46,6 +46,8 @@ public:
 
     Level(int difficulty, int level, bool create = false);
 
+    QString createMultipleFolder(QString createDir);
+
     void read();
 
     void write();

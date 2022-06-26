@@ -4,6 +4,7 @@
 // Created by y on 2022/6/22.
 //
 
+#include <QDir>
 #include "Level.h"
 
 Level::Level(int number) {
@@ -86,6 +87,7 @@ Level::~Level() {
 }
 
 Level::Level(int difficulty, int level, bool create) {
+    createMultipleFolder("./level");
     path = QString("./level/difficulty%1-%2.txt").arg(difficulty).arg(level);
     if (create) {
         this->level = level;
@@ -112,6 +114,22 @@ Level::Level(int difficulty, int level, bool create) {
 
 void Level::setLines(Line *l) {
     Level::lines = l;
+}
+
+QString Level::createMultipleFolder(QString createDir) {
+    QDir dir(createDir);
+    if (dir.exists(createDir)) {
+        return createDir;
+    }
+
+    QString parentDir = createMultipleFolder(createDir.mid(0, createDir.lastIndexOf('/')));
+    QString dirName = createDir.mid(createDir.lastIndexOf('/') + 1);
+    QDir parentPath(parentDir);
+    if (!dirName.isEmpty())
+    {
+        parentPath.mkpath(dirName);
+    }
+    return parentDir + "/" + dirName;
 }
 
 #pragma clang diagnostic pop
