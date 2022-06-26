@@ -28,7 +28,7 @@ private:
     QString path;
 
 public:
-    void setLines(Line *lines);
+    void setLines(Line *l);
 
     __attribute__((unused)) int getLevel() const;
 

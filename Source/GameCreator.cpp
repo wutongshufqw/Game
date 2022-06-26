@@ -1,3 +1,5 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "cert-msc50-cpp"
 //
 // Created by y on 2022/6/26.
 //
@@ -20,7 +22,7 @@ GameCreator::GameCreator(int difficulty, int level) {
                 continue;
             if (std::count(vector.begin(), vector.end(), QPoint(en, beg)))
                 continue;
-            vector.push_back(QPoint(beg, en));
+            vector.emplace_back(beg, en);
             lines[i] = {{beg / this->level->getSize()[1], beg % this->level->getSize()[1]},
                         {en / this->level->getSize()[1],  en % this->level->getSize()[1]}};
             beg = en;
@@ -31,3 +33,5 @@ GameCreator::GameCreator(int difficulty, int level) {
     this->level->write();
     delete this->level;
 }
+
+#pragma clang diagnostic pop

@@ -269,6 +269,8 @@ int GameShow::inLine(int a, int b) {
     return -1;
 }
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "readability-use-anyofallof"
 bool GameShow::existence(Line l) {
     for (auto &green_line: green_lines) {
         if (green_line.start.x() == l.start.x() && green_line.start.y() == l.start.y() &&
@@ -288,6 +290,7 @@ bool GameShow::existence(Line l) {
     }
     return false;
 }
+#pragma clang diagnostic pop
 
 bool GameShow::finish() {
     if (!red_lines.empty())

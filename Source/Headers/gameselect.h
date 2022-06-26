@@ -24,7 +24,10 @@ public:
 
 signals:
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "NotImplementedFunctions"
     void play_game(QWidget *);
+#pragma clang diagnostic pop
 
 private:
     Ui::GameSelect *ui;

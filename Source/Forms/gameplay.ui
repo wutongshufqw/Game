@@ -104,7 +104,7 @@
                             </widget>
                         </item>
                         <item>
-                            <widget class="QLabel" name="minumTime">
+                            <widget class="QLabel" name="minimTime">
                                 <property name="text">
                                     <string>最快记录</string>
                                 </property>

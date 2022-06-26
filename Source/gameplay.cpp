@@ -38,7 +38,7 @@ GamePlay::GamePlay(int level, QWidget *parent, bool ai, int difficulty, bool res
     connect(timer, &QTimer::timeout, this, &GamePlay::update_);
     timer->start(1000);
 
-    ui->minumTime->setText("最快用时\n" + level_->getTime().toString("hh:mm:ss"));
+    ui->minimTime->setText("最快用时\n" + level_->getTime().toString("hh:mm:ss"));
     ui->nowTime->setText("当前用时\n00:00:00");
     ui->level->setText(QString("第%1%2").arg(level).arg("关"));
 

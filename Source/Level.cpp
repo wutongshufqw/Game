@@ -1,3 +1,5 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "cert-msc50-cpp"
 //
 // Created by y on 2022/6/22.
 //
@@ -108,6 +110,8 @@ Level::Level(int difficulty, int level, bool create) {
     }
 }
 
-void Level::setLines(Line *lines) {
-    Level::lines = lines;
+void Level::setLines(Line *l) {
+    Level::lines = l;
 }
+
+#pragma clang diagnostic pop

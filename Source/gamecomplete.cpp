@@ -10,6 +10,8 @@
 #include "mainwindow.h"
 #include <QMouseEvent>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 GameComplete::GameComplete(bool nextLevel, bool flag, const QString &str, QWidget *parent) :
         QDialog(parent), ui(new Ui::GameComplete) {
     ui->setupUi(this);
@@ -61,3 +63,5 @@ void GameComplete::mousePressEvent(QMouseEvent *event) {
 void GameComplete::mouseMoveEvent(QMouseEvent *event) {
     this->move(event->globalPos() - this->dPos);
 }
+
+#pragma clang diagnostic pop

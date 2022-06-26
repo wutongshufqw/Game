@@ -44,9 +44,6 @@ private:
 
     bool existence(Line l);
 
-    QPoint windowPos;
-    QPoint mousePos;
-    QPoint dPos;
     QPoint *points{};
     QPoint topLeft;
     QPoint bottomRight;
